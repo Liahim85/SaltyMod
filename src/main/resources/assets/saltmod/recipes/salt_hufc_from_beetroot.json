@@ -1,0 +1,32 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_hufc",
+    "ingredients": [
+        {
+            "item": "saltmod:salt_beetroot"
+        },
+        {
+            "item": "minecraft:potato"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:fish",
+            "data": 0
+        },
+        {
+            "item": "minecraft:egg"
+        },
+        {
+            "item": "minecraft:red_flower",
+            "data": 2
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_hufc"
+    }
+}

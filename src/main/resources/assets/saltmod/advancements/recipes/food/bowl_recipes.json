@@ -1,0 +1,94 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:vegetable_stew",
+            "saltmod:potato_mushroom",
+            "saltmod:fish_soup",
+            "saltmod:fish_salmon_soup",
+            "saltmod:dandelion_salad",
+            "saltmod:wheat_sprouts",
+            "saltmod:fruit_salad"
+        ]
+    },
+    "criteria": {
+        "has_bowl": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:bowl"
+                    }
+                ]
+            }
+        },
+        "has_the_bowl_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:bowl"
+            }
+        },
+        "has_the_stew_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:mushroom_stew"
+            }
+        },
+        "has_the_vegetable_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:vegetable_stew"
+            }
+        },
+        "has_the_potato_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:potato_mushroom"
+            }
+        },
+        "has_the_fish_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:fish_soup"
+            }
+        },
+        "has_the_salmon_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:fish_salmon_soup"
+            }
+        },
+        "has_the_dandelion_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:dandelion_salad"
+            }
+        },
+        "has_the_wheat_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:wheat_sprouts"
+            }
+        },
+        "has_the_fruit_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:fruit_salad"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_bowl",
+            "has_the_bowl_recipe",
+            "has_the_stew_recipe",
+            "has_the_vegetable_recipe",
+            "has_the_potato_recipe",
+            "has_the_fish_recipe",
+            "has_the_salmon_recipe",
+            "has_the_dandelion_recipe",
+            "has_the_wheat_recipe",
+            "has_the_fruit_recipe"
+        ]
+    ]
+}

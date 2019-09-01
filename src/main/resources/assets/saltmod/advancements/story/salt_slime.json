@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:escargot"
+        },
+        "title": {
+            "translate": "advancements.salt_slime"
+        },
+        "description": {
+            "translate": "advancements.salt_slime.desc"
+        }
+    },
+    "parent": "saltmod:story/salt_crystal_get",
+    "criteria": {
+        "salt_slime": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:escargot"
+            }
+        }
+    }
+}

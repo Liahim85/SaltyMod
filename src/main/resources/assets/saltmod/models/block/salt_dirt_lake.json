@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "top": "saltmod:blocks/salt_dirt_top",
+        "bottom": "saltmod:blocks/salt_dirt",       
+        "side": "saltmod:blocks/salt_dirt_side"
+    }
+}

@@ -1,0 +1,184 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_mushroom_stew",
+            "saltmod:salt_mushroom_stew_from_stew",
+            "saltmod:salt_vegetable_stew",
+            "saltmod:salt_vegetable_stew_from_stew",
+            "saltmod:salt_potato_mushroom",
+            "saltmod:salt_potato_mushroom_from_stew",
+            "saltmod:salt_fish_soup",
+            "saltmod:salt_fish_soup_from_soup",
+            "saltmod:salt_fish_salmon_soup",
+            "saltmod:salt_fish_salmon_soup_from_soup",
+            "saltmod:salt_dandelion_salad",
+            "saltmod:salt_dandelion_salad_from_salad",
+            "saltmod:salt_wheat_sprouts",
+            "saltmod:salt_wheat_sprouts_from_sprouts"
+        ]
+    },
+    "criteria": {
+        "has_bowl": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:bowl"
+                    }
+                ]
+            }
+        },
+        "has_pinch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_pinch"
+                    }
+                ]
+            }
+        },
+        "has_the_bowl_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:bowl"
+            }
+        },
+        "has_the_stew_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:mushroom_stew"
+            }
+        },
+        "has_the_salt_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt"
+            }
+        },
+        "has_the_mushroom_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_mushroom_stew"
+            }
+        },
+        "has_the_mushroom_from_stew_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_mushroom_stew_from_stew"
+            }
+        },
+        "has_the_vegetable_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_vegetable_stew"
+            }
+        },
+        "has_the_vegetable_from_stew_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_vegetable_stew_from_stew"
+            }
+        },
+        "has_the_potato_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_potato_mushroom"
+            }
+        },
+        "has_the_potato_from_stew_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_potato_mushroom_from_stew"
+            }
+        },
+        "has_the_fish_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_fish_soup"
+            }
+        },
+        "has_the_fish_from_soup_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_fish_soup_from_soup"
+            }
+        },
+        "has_the_fish_salmon_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_fish_salmon_soup"
+            }
+        },
+        "has_the_fish_salmon_from_soup_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_fish_salmon_soup_from_soup"
+            }
+        },
+        "has_the_dandelion_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_dandelion_salad"
+            }
+        },
+        "has_the_dandelion_from_salad_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_dandelion_salad_from_salad"
+            }
+        },
+        "has_the_sprouts_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_wheat_sprouts"
+            }
+        },
+        "has_the_sprouts_from_sprouts_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_wheat_sprouts_from_sprouts"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_bowl",
+            "has_the_bowl_recipe",
+            "has_the_stew_recipe",
+            "has_the_mushroom_recipe",
+            "has_the_mushroom_from_stew_recipe",
+            "has_the_vegetable_recipe",
+            "has_the_vegetable_from_stew_recipe",
+            "has_the_potato_recipe",
+            "has_the_potato_from_stew_recipe",
+            "has_the_fish_recipe",
+            "has_the_fish_from_soup_recipe",
+            "has_the_fish_salmon_recipe",
+            "has_the_fish_salmon_from_soup_recipe",
+            "has_the_dandelion_recipe",
+            "has_the_dandelion_from_salad_recipe",
+            "has_the_sprouts_recipe",
+            "has_the_sprouts_from_sprouts_recipe"
+        ],
+        [
+            "has_pinch",
+            "has_the_salt_recipe",
+            "has_the_mushroom_recipe",
+            "has_the_mushroom_from_stew_recipe",
+            "has_the_vegetable_recipe",
+            "has_the_vegetable_from_stew_recipe",
+            "has_the_potato_recipe",
+            "has_the_potato_from_stew_recipe",
+            "has_the_fish_recipe",
+            "has_the_fish_from_soup_recipe",
+            "has_the_fish_salmon_recipe",
+            "has_the_fish_salmon_from_soup_recipe",
+            "has_the_dandelion_recipe",
+            "has_the_dandelion_from_salad_recipe",
+            "has_the_sprouts_recipe",
+            "has_the_sprouts_from_sprouts_recipe"
+        ]
+    ]
+}

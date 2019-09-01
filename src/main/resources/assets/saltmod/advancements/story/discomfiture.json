@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:achiev_item",
+            "data": 2
+        },
+        "title": {
+            "translate": "advancements.discomfiture"
+        },
+        "description": {
+            "translate": "advancements.discomfiture.desc"
+        }
+    },
+    "parent": "saltmod:story/mineral_mud",
+    "criteria": {
+        "discomfiture": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:mineral_mud"
+            }
+        }
+    }
+}

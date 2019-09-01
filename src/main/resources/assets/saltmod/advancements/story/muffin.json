@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:muffin"
+        },
+        "title": {
+            "translate": "advancements.muffin"
+        },
+        "description": {
+            "translate": "advancements.muffin.desc"
+        }
+    },
+    "parent": "saltmod:story/root",
+    "criteria": {
+        "muffin": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:muffin"
+            }
+        }
+    }
+}

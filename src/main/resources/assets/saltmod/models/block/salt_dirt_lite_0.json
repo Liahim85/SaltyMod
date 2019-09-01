@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "saltmod:blocks/salt_dirt_lite_0"
+    }
+}

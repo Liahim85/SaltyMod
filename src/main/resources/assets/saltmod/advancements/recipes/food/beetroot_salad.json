@@ -1,0 +1,67 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:beetroot_salad"
+        ]
+    },
+    "criteria": {
+        "has_bowl": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:bowl"
+                    }
+                ]
+            }
+        },
+        "has_beetroot": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:beetroot"
+                    }
+                ]
+            }
+        },
+        "has_the_bowl_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:bowl"
+            }
+        },
+        "has_the_stew_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:mushroom_stew"
+            }
+        },
+        "has_the_beetroot_salad_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:beetroot_salad"
+            }
+        },
+        "has_the_beetroot_soup_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:beetroot_soup"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_bowl",
+            "has_the_bowl_recipe",
+            "has_the_stew_recipe",
+            "has_the_beetroot_salad_recipe"
+        ],
+        [
+            "has_beetroot",
+            "has_the_beetroot_soup_recipe",
+            "has_the_beetroot_salad_recipe"
+        ]
+    ]
+}

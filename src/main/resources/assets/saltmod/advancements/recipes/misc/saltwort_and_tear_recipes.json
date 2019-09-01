@@ -1,0 +1,74 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:fermented_saltwort"
+        ]
+    },
+    "criteria": {
+        "has_tear": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:ghast_tear"
+                    }
+                ]
+            }
+        },
+        "has_saltwort": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:saltwort_seed"
+                    }
+                ]
+            }
+        },
+        "has_bottle": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:glass_bottle"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:fermented_saltwort"
+            }
+        },
+        "has_the_dye_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:green_dye"
+            }
+        },
+        "has_the_bottle_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:glass_bottle"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_tear",
+            "has_the_recipe"
+        ],
+        [
+            "has_saltwort",
+            "has_the_dye_recipe",
+            "has_the_recipe"
+        ],
+        [
+            "has_bottle",
+            "has_the_bottle_recipe",
+            "has_the_recipe"
+        ]
+    ]
+}

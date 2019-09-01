@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_fish_clownfish",
+    "ingredients": [
+        {
+            "item": "#SALT_PINCH"
+        },
+        {
+            "item": "#SALT_PINCH"
+        },
+        {
+            "item": "#SALT_PINCH"
+        },
+        {
+            "item": "minecraft:fish",
+            "data": 2
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_fish_clownfish"
+    }
+}

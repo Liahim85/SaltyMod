@@ -1,0 +1,59 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:extractor"
+        ]
+    },
+    "criteria": {
+        "has_cauldron": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:cauldron"
+                    }
+                ]
+            }
+        },
+        "has_cobblestone": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:cobblestone"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:extractor"
+            }
+        },
+        "has_the_cauldron_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:cauldron"
+            }
+        },
+        "has_the_furnace_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:furnace"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_cauldron",
+            "has_the_recipe",
+            "has_the_cauldron_recipe"
+        ],
+        [
+            "has_cobblestone",
+            "has_the_furnace_recipe"
+        ]
+    ]
+}

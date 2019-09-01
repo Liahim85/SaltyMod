@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:water_bucket"
+        },
+        "title": {
+            "translate": "advancements.more_buckets"
+        },
+        "description": {
+            "translate": "advancements.more_buckets.desc"
+        }
+    },
+    "parent": "saltmod:story/root",
+    "criteria": {
+        "more_buckets": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "minecraft:water_bucket"
+            }
+        }
+    }
+}

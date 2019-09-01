@@ -1,0 +1,32 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "pickled_mushroom",
+    "ingredients": [
+        [
+            {
+                "item": "minecraft:brown_mushroom"
+            },
+            {
+                "item": "minecraft:red_mushroom"
+            }
+        ],
+        [
+            {
+                "item": "minecraft:red_mushroom"
+            },
+            {
+                "item": "minecraft:brown_mushroom"
+            }
+        ],
+        {
+            "item": "#SALT_PINCH"
+        },
+        {
+            "type": "saltmod:potion_bottle",
+            "potion": "water"
+        }
+    ],
+    "result": {
+        "item": "saltmod:pickled_mushroom"
+    }
+}

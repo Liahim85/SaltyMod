@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "variant=default": { "model": "saltmod:salt_block" },
+        "variant=block_chiseled": { "model": "saltmod:salt_block_chiseled" },
+        "variant=lines_y": { "model": "saltmod:salt_block_pillar" },
+        "variant=lines_z": { "model": "saltmod:salt_block_pillar", "x": 90 },
+        "variant=lines_x": { "model": "saltmod:salt_block_pillar", "x": 90, "y": 90 },
+        "variant=brick": { "model": "saltmod:salt_brick" },
+        "variant=block_cracked": { "model": "saltmod:salt_block_cracked" },
+        "variant=brick_cracked": { "model": "saltmod:salt_brick_cracked" },
+        "variant=brick_chiseled": { "model": "saltmod:salt_brick_chiseled" },
+        "variant=chapiter": { "model": "saltmod:salt_chapiter" }
+    }
+}

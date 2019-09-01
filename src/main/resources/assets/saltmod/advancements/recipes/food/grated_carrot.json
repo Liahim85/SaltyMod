@@ -1,0 +1,67 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:grated_carrot"
+        ]
+    },
+    "criteria": {
+        "has_bowl": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:bowl"
+                    }
+                ]
+            }
+        },
+        "has_sugar": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:sugar"
+                    }
+                ]
+            }
+        },
+        "has_the_bowl_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:bowl"
+            }
+        },
+        "has_the_stew_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:mushroom_stew"
+            }
+        },
+        "has_the_grated_carrot_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:grated_carrot"
+            }
+        },
+        "has_the_sugar_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:sugar"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_bowl",
+            "has_the_bowl_recipe",
+            "has_the_stew_recipe",
+            "has_the_grated_carrot_recipe"
+        ],
+        [
+            "has_sugar",
+            "has_the_sugar_recipe",
+            "has_the_grated_carrot_recipe"
+        ]
+    ]
+}

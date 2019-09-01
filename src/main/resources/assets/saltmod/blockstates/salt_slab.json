@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "half=bottom,variant=block": { "model": "saltmod:salt_slab_half_block" },
+        "half=bottom,variant=brick": { "model": "saltmod:salt_slab_half_brick" },
+        "half=bottom,variant=pillar": { "model": "saltmod:salt_slab_half_pillar" },
+        "half=top,variant=block": { "model": "saltmod:salt_slab_upper_block" },
+        "half=top,variant=brick": { "model": "saltmod:salt_slab_upper_brick" },
+        "half=top,variant=pillar": { "model": "saltmod:salt_slab_upper_pillar" }
+    }
+}

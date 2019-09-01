@@ -1,0 +1,44 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt",
+    "ingredients": [
+        [
+            {
+                "item": "saltmod:salt_block",
+                "data": 0
+            },
+            {
+                "item": "saltmod:salt_block",
+                "data": 1
+            },
+            {
+                "item": "saltmod:salt_block",
+                "data": 2
+            },
+            {
+                "item": "saltmod:salt_block",
+                "data": 5
+            },
+            {
+                "item": "saltmod:salt_block",
+                "data": 6
+            },
+            {
+                "item": "saltmod:salt_block",
+                "data": 7
+            },
+            {
+                "item": "saltmod:salt_block",
+                "data": 8
+            },
+            {
+                "item": "saltmod:salt_block",
+                "data": 9
+            }
+        ]
+    ],
+    "result": {
+        "item": "saltmod:salt",
+        "count": 9
+    }
+}

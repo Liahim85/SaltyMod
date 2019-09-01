@@ -1,0 +1,29 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_vegetable_stew",
+    "ingredients": [
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:potato"
+        },
+        [
+            {
+                "item": "minecraft:brown_mushroom"
+            },
+            {
+                "item": "minecraft:red_mushroom"
+            }
+        ],
+        {
+            "item": "#SALT_PINCH"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_vegetable_stew"
+    }
+}

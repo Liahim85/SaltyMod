@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "extractor",
+    "pattern": [
+        "XYX",
+        "X X",
+        "XXX"
+    ],
+    "key": {
+        "X": {
+            "item": "minecraft:cobblestone"
+        },
+        "Y": {
+            "item": "minecraft:cauldron"
+        }
+    },
+    "result": {
+        "item": "saltmod:extractor"
+    }
+}

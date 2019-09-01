@@ -1,0 +1,29 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_potato_mushroom",
+    "ingredients": [
+        {
+            "item": "minecraft:potato"
+        },
+        {
+            "item": "minecraft:potato"
+        },
+        [
+            {
+                "item": "minecraft:brown_mushroom"
+            },
+            {
+                "item": "minecraft:red_mushroom"
+            }
+        ],
+        {
+            "item": "#SALT_PINCH"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_potato_mushroom"
+    }
+}

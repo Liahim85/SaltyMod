@@ -1,0 +1,128 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_beef_cooked",
+            "saltmod:salt_porkchop_cooked",
+            "saltmod:salt_mutton_cooked",
+            "saltmod:salt_chicken_cooked",
+            "saltmod:salt_rabbit_cooked",
+            "saltmod:salt_potato_baked",
+            "saltmod:salt_fish_cod",
+            "saltmod:salt_fish_cod_cooked",
+            "saltmod:salt_fish_salmon",
+            "saltmod:salt_fish_salmon_cooked",
+            "saltmod:salt_fish_clownfish",
+            "saltmod:salt_bread",
+            "saltmod:corned_beef"
+        ]
+    },
+    "criteria": {
+        "has_salt_pinch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_pinch"
+                    }
+                ]
+            }
+        },
+        "has_the_beef_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_beef_cooked"
+            }
+        },
+        "has_the_porkchop_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_porkchop_cooked"
+            }
+        },
+        "has_the_mutton_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_mutton_cooked"
+            }
+        },
+        "has_the_chicken_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_chicken_cooked"
+            }
+        },
+        "has_the_rabbit_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_rabbit_cooked"
+            }
+        },
+        "has_the_potato_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_potato_baked"
+            }
+        },
+        "has_the_fish_cod_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_fish_cod"
+            }
+        },
+        "has_the_fish_cod_cooked_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_fish_cod_cooked"
+            }
+        },
+        "has_the_fish_salmon_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_fish_salmon"
+            }
+        },
+        "has_the_fish_salmon_cooked_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_fish_salmon_cooked"
+            }
+        },
+        "has_the_fish_clownfish_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_fish_clownfish"
+            }
+        },
+        "has_the_bread_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_bread"
+            }
+        },
+        "has_the_corned_beef_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:corned_beef"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_salt_pinch",
+            "has_the_beef_recipe",
+            "has_the_porkchop_recipe",
+            "has_the_mutton_recipe",
+            "has_the_chicken_recipe",
+            "has_the_rabbit_recipe",
+            "has_the_potato_recipe",
+            "has_the_fish_cod_recipe",
+            "has_the_fish_cod_cooked_recipe",
+            "has_the_fish_salmon_recipe",
+            "has_the_fish_salmon_cooked_recipe",
+            "has_the_fish_clownfish_recipe",
+            "has_the_bread_recipe",
+            "has_the_corned_beef_recipe"
+        ]
+    ]
+}

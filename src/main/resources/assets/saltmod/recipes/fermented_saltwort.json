@@ -1,0 +1,30 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "fermented_saltwort",
+    "ingredients": [
+        {
+            "item": "saltmod:saltwort_seed"
+        },
+        {
+            "item": "saltmod:saltwort_seed"
+        },
+        {
+            "item": "saltmod:saltwort_seed"
+        },
+        {
+            "item": "saltmod:saltwort_seed"
+        },
+        {
+            "item": "saltmod:saltwort_seed"
+        },
+        {
+            "item": "minecraft:ghast_tear"
+        },
+        {
+            "item": "minecraft:glass_bottle"
+        }
+    ],
+    "result": {
+        "item": "saltmod:fermented_saltwort"
+    }
+}

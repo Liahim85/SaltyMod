@@ -1,0 +1,16 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "fizzy_drink",
+    "ingredients": [
+        {
+            "type": "saltmod:potion_bottle",
+            "potion": "water"
+        },
+        {
+            "item": "saltmod:soda"
+        }
+    ],
+    "result": {
+        "item": "saltmod:fizzy_drink"
+    }
+}

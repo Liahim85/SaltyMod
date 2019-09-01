@@ -1,0 +1,105 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_egg",
+            "saltmod:potato_pie",
+            "saltmod:onion_pie",
+            "saltmod:mushroom_pie",
+            "saltmod:fish_pie",
+            "saltmod:fish_salmon_pie"
+        ]
+    },
+    "criteria": {
+        "has_salt_pinch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_pinch"
+                    }
+                ]
+            }
+        },
+        "has_egg": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:egg"
+                    }
+                ]
+            }
+        },
+        "has_the_egg_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_egg"
+            }
+        },
+        "has_the_potato_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:potato_pie"
+            }
+        },
+        "has_the_onion_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:onion_pie"
+            }
+        },
+        "has_the_mushroom_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:mushroom_pie"
+            }
+        },
+        "has_the_fish_cod_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:fish_pie"
+            }
+        },
+        "has_the_fish_salmon_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:fish_salmon_pie"
+            }
+        },
+        "has_the_cake_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:cake"
+            }
+        },
+        "has_the_salt_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_egg",
+            "has_the_cake_recipe",
+            "has_the_egg_recipe",
+            "has_the_potato_recipe",
+            "has_the_onion_recipe",
+            "has_the_mushroom_recipe",
+            "has_the_fish_cod_recipe",
+            "has_the_fish_salmon_recipe"
+        ],
+        [
+            "has_salt_pinch",
+            "has_the_salt_recipe",
+            "has_the_egg_recipe",
+            "has_the_potato_recipe",
+            "has_the_onion_recipe",
+            "has_the_mushroom_recipe",
+            "has_the_fish_cod_recipe",
+            "has_the_fish_salmon_recipe"
+        ]
+    ]
+}

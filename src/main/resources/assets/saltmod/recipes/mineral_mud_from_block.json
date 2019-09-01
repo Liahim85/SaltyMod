@@ -1,0 +1,14 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "mineral_mud",
+    "ingredients": [
+        {
+            "item": "saltmod:mud_block",
+            "data": 0
+        }
+    ],
+    "result": {
+        "item": "saltmod:mineral_mud",
+        "count": 4
+    }
+}

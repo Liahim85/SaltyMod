@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:iron_pickaxe"
+        },
+        "title": {
+            "translate": "advancements.salt_crystal_get"
+        },
+        "description": {
+            "translate": "advancements.salt_crystal_get.desc"
+        }
+    },
+    "parent": "saltmod:story/root",
+    "criteria": {
+        "salt_crystal_get": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_crystal",
+                        "data": 0
+                    }
+                ]
+            }
+        }
+    }
+}

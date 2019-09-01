@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "saltmod:blocks/salt_lake_side",
+        "down": "saltmod:blocks/salt_ore",
+        "up": "saltmod:blocks/salt_lake_top",
+        "north": "saltmod:blocks/salt_lake_flow",
+        "east": "saltmod:blocks/salt_lake_flow",
+        "south": "saltmod:blocks/salt_lake_flow",
+        "west": "saltmod:blocks/salt_lake_flow"
+    }
+}

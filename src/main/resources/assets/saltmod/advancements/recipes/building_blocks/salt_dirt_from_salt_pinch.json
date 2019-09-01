@@ -1,0 +1,43 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_dirt_from_salt_pinch"
+        ]
+    },
+    "criteria": {
+        "has_salt_pinch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_pinch"
+                    }
+                ]
+            }
+        },
+        "has_salt_dirt_lite": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_dirt_lite"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_dirt_from_salt_pinch"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_salt_pinch",
+            "has_salt_dirt_lite",
+            "has_the_recipe"
+        ]
+    ]
+}

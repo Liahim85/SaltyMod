@@ -1,0 +1,15 @@
+{ 
+    "type": "saltmod:non_remaining_shapeless",
+    "group": "milk_bucket",
+    "ingredients": [
+        {
+            "item": "minecraft:water_bucket"
+        },
+        {
+            "item": "saltmod:powdered_milk"
+        }
+    ],
+    "result": {
+        "item": "minecraft:milk_bucket"
+    }
+}

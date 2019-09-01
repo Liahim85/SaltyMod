@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "fish_pie",
+    "ingredients": [
+        {
+            "item": "minecraft:fish",
+            "data": 0
+        },
+        {
+            "item": "minecraft:wheat"
+        },
+        {
+            "item": "#SALT_PINCH"
+        },
+        {
+            "item": "minecraft:egg"
+        }
+    ],
+    "result": {
+        "item": "saltmod:fish_pie"
+    }
+}

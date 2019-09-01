@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "saltwort_beef",
+    "ingredients": [
+        {
+            "item": "minecraft:cooked_beef"
+        },
+        {
+            "item": "saltmod:saltwort_seed"
+        },
+        {
+            "item": "saltmod:saltwort_seed"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:saltwort_beef"
+    }
+}

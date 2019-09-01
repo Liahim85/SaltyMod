@@ -1,0 +1,94 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:saltwort_salad",
+            "saltmod:saltwort_beef",
+            "saltmod:saltwort_porkchop",
+            "saltmod:saltwort_mutton"
+        ]
+    },
+    "criteria": {
+        "has_bowl": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:bowl"
+                    }
+                ]
+            }
+        },
+        "has_saltwort": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:saltwort_seed"
+                    }
+                ]
+            }
+        },
+        "has_the_bowl_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:bowl"
+            }
+        },
+        "has_the_stew_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:mushroom_stew"
+            }
+        },
+        "has_the_salad_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:saltwort_salad"
+            }
+        },
+        "has_the_beef_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:saltwort_beef"
+            }
+        },
+        "has_the_porkchop_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:saltwort_porkchop"
+            }
+        },
+        "has_the_mutton_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:saltwort_mutton"
+            }
+        },
+        "has_the_dye_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:green_dye"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_bowl",
+            "has_the_bowl_recipe",
+            "has_the_stew_recipe",
+            "has_the_salad_recipe",
+            "has_the_beef_recipe",
+            "has_the_porkchop_recipe",
+            "has_the_mutton_recipe"
+        ],
+        [
+            "has_saltwort",
+            "has_the_dye_recipe",
+            "has_the_salad_recipe",
+            "has_the_beef_recipe",
+            "has_the_porkchop_recipe",
+            "has_the_mutton_recipe"
+        ]
+    ]
+}

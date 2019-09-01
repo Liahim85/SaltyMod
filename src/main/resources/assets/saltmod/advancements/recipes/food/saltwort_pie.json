@@ -1,0 +1,60 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:saltwort_pie"
+        ]
+    },
+    "criteria": {
+        "has_saltwort": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:saltwort_seed"
+                    }
+                ]
+            }
+        },
+        "has_egg": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:egg"
+                    }
+                ]
+            }
+        },
+        "has_the_dye_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:green_dye"
+            }
+        },
+        "has_the_pie_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:saltwort_pie"
+            }
+        },
+        "has_the_cake_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:cake"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_saltwort",
+            "has_the_dye_recipe",
+            "has_the_pie_recipe"
+        ],
+        [
+            "has_egg",
+            "has_the_cake_recipe",
+            "has_the_pie_recipe"
+        ]
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_pinch_from_crystal"
+        ]
+    },
+    "criteria": {
+        "has_salt_crystal": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_crystal"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_pinch_from_crystal"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_salt_crystal",
+            "has_the_recipe"
+        ]
+    ]
+}

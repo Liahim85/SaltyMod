@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:rainmaker"
+        },
+        "title": {
+            "translate": "advancements.rain"
+        },
+        "description": {
+            "translate": "advancements.rain.desc"
+        }
+    },
+    "parent": "saltmod:story/salt",
+    "criteria": {
+        "rain": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:rainmaker"
+            }
+        }
+    }
+}

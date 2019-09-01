@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "stage=stage_0": { "model": "saltmod:saltwort" },
+        "stage=stage_1": { "model": "saltmod:saltwort_1" },
+        "stage=stage_2": { "model": "saltmod:saltwort_2" },
+        "stage=stage_3": { "model": "saltmod:saltwort_3" },
+        "stage=stage_4": { "model": "saltmod:saltwort_4" },
+        "stage=dead": { "model": "saltmod:saltwort_d" }
+    }
+}

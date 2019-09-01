@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "fruit_salad",
+    "ingredients": [
+        {
+            "item": "minecraft:apple"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:melon"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:fruit_salad"
+    }
+}

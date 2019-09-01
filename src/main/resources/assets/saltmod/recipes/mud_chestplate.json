@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "mud_chestplate",
+    "pattern": [
+        "X X",
+        "XXX",
+        "XXX"
+    ],
+    "key": {
+        "X": {
+            "item": "saltmod:mineral_mud"
+        }
+    },
+    "result": {
+        "item": "saltmod:mud_chestplate"
+    }
+}

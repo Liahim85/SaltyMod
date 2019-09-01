@@ -1,0 +1,32 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt"
+        ]
+    },
+    "criteria": {
+        "has_salt_pinch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_pinch"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_salt_pinch",
+            "has_the_recipe"
+        ]
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:water_bottle"
+        ]
+    },
+    "criteria": {
+        "has_bottle": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:glass_bottle"
+                    }
+                ]
+            }
+        },
+        "has_snowball": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:snowball"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:water_bottle"
+            }
+        },
+        "has_the_snow_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:snow"
+            }
+        },
+        "has_the_bottle_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:glass_bottle"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_bottle",
+            "has_the_bottle_recipe",
+            "has_the_recipe"
+        ],
+        [
+            "has_snowball",
+            "has_the_snow_recipe",
+            "has_the_recipe"
+        ]
+    ]
+}

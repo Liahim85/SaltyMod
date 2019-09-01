@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "mud_block",
+    "pattern": [
+        "XX",
+        "XX"
+    ],
+    "key": {
+        "X": {
+            "item": "saltmod:mineral_mud"
+        }
+    },
+    "result": {
+        "item": "saltmod:mud_block"
+    }
+}

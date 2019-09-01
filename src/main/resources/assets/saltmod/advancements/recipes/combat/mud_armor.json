@@ -1,0 +1,56 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:mud_helmet",
+            "saltmod:mud_chestplate",
+            "saltmod:mud_leggings",
+            "saltmod:mud_boots"
+        ]
+    },
+    "criteria": {
+        "has_mineral_mud": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:mineral_mud"
+                    }
+                ]
+            }
+        },
+        "has_the_helmet_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:mud_helmet"
+            }
+        },
+        "has_the_chestplate_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:mud_chestplate"
+            }
+        },
+        "has_the_leggings_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:mud_leggings"
+            }
+        },
+        "has_the_boots_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:mud_boots"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_mineral_mud",
+            "has_the_helmet_recipe",
+            "has_the_chestplate_recipe",
+            "has_the_leggings_recipe",
+            "has_the_boots_recipe"
+        ]
+    ]
+}

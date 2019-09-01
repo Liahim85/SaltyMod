@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "mud_helmet",
+    "pattern": [
+        "XXX",
+        "X X"
+    ],
+    "key": {
+        "X": {
+            "item": "saltmod:mineral_mud"
+        }
+    },
+    "result": {
+        "item": "saltmod:mud_helmet"
+    }
+}

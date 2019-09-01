@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "carrot_pie",
+    "ingredients": [
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:sugar"
+        },
+        {
+            "item": "minecraft:egg"
+        }
+    ],
+    "result": {
+        "item": "saltmod:carrot_pie"
+    }
+}

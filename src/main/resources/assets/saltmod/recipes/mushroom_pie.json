@@ -1,0 +1,31 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "mushroom_pie",
+    "ingredients": [
+        [
+            {
+                "item": "minecraft:brown_mushroom"
+            },
+            {
+                "item": "minecraft:red_mushroom"
+            }
+        ],
+        [
+            {
+                "item": "minecraft:red_mushroom"
+            },
+            {
+                "item": "minecraft:brown_mushroom"
+            }
+        ],
+        {
+            "item": "#SALT_PINCH"
+        },
+        {
+            "item": "minecraft:egg"
+        }
+    ],
+    "result": {
+        "item": "saltmod:mushroom_pie"
+    }
+}

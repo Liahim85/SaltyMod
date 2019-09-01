@@ -1,0 +1,13 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_pinch",
+    "ingredients": [
+        {
+            "item": "saltmod:salt_crystal",
+            "data": 0
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_pinch"
+    }
+}

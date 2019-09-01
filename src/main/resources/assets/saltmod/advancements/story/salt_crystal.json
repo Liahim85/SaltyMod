@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:salt_crystal",
+            "data": 0
+        },
+        "title": {
+            "translate": "advancements.salt_crystal"
+        },
+        "description": {
+            "translate": "advancements.salt_crystal.desc"
+        },
+        "frame": "challenge"
+    },
+    "parent": "saltmod:story/root",
+    "criteria": {
+        "salt_crystal": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:salt_crystal",
+                "data": 0
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "mud_leggings",
+    "pattern": [
+        "XXX",
+        "X X",
+        "X X"
+    ],
+    "key": {
+        "X": {
+            "item": "saltmod:mineral_mud"
+        }
+    },
+    "result": {
+        "item": "saltmod:mud_leggings"
+    }
+}

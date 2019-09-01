@@ -1,0 +1,49 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_from_block",
+            "saltmod:salt_slab_brick",
+            "saltmod:salt_brick_stairs"
+        ]
+    },
+    "criteria": {
+        "has_salt_brick": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_block",
+                        "data": 5
+                    }
+                ]
+            }
+        },
+        "has_the_salt_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_from_block"
+            }
+        },
+        "has_the_slab_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_slab_brick"
+            }
+        },
+        "has_the_stairs_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_brick_stairs"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_salt_brick",
+            "has_the_salt_recipe",
+            "has_the_slab_recipe",
+            "has_the_stairs_recipe"
+        ]
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:milk_bucket"
+        ]
+    },
+    "criteria": {
+        "has_bucket": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:water_bucket"
+                    }
+                ]
+            }
+        },
+        "has_milk": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:powdered_milk"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:milk_bucket"
+            }
+        },
+        "has_the_cauldron_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:cauldron"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_bucket",
+            "has_the_cauldron_recipe",
+            "has_the_recipe"
+        ],
+        [
+            "has_milk",
+            "has_the_recipe"
+        ]
+    ]
+}

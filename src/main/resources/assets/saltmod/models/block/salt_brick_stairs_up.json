@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "saltmod:blocks/salt_brick_top",
+        "top": "saltmod:blocks/salt_brick_bottom",       
+        "side": "saltmod:blocks/salt_brick"
+    }
+}

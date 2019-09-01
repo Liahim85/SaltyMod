@@ -1,0 +1,97 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:salt_ore"
+        },
+        "title": {
+            "translate": "advancements.root"
+        },
+        "description": {
+            "translate": ""
+        },
+        "background": "saltmod:textures/blocks/salt_lake_top.png",
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "salt": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt"
+                    }
+                ]
+            }
+        },
+        "mineral_mud": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:mineral_mud"
+                    }
+                ]
+            }
+        },
+        "saltwort": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:saltwort_seed"
+                    }
+                ]
+            }
+        },
+        "salt_crystal_get": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_crystal",
+                        "data": 0
+                    }
+                ]
+            }
+        },
+        "muffin": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:muffin"
+            }
+        },
+        "more_buckets": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "minecraft:water_bucket"
+            }
+        },
+        "salt_crystal": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:salt_crystal",
+                "data": 0
+            }
+        },
+        "salt_lake": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:salt_lake",
+                "data": 0
+            }
+        }
+    },
+    "requirements": [
+        [
+            "salt",
+            "mineral_mud",
+            "saltwort",
+            "salt_crystal_get",
+            "muffin",
+            "more_buckets",
+            "salt_crystal",
+            "salt_lake"
+        ]
+    ]
+}

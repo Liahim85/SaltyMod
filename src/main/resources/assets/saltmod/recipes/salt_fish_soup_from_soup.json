@@ -1,0 +1,15 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_fish_soup",
+    "ingredients": [
+        {
+            "item": "saltmod:fish_soup"
+        },
+        {
+            "item": "#SALT_PINCH"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_fish_soup"
+    }
+}

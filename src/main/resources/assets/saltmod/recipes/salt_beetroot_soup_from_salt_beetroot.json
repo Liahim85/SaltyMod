@@ -1,0 +1,30 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_beetroot_soup",
+    "ingredients": [
+        {
+            "item": "minecraft:beetroot"
+        },
+        {
+            "item": "minecraft:beetroot"
+        },
+        {
+            "item": "minecraft:beetroot"
+        },
+        {
+            "item": "minecraft:beetroot"
+        },
+        {
+            "item": "saltmod:salt_beetroot"
+        },
+        {
+            "item": "minecraft:beetroot"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_beetroot_soup"
+    }
+}

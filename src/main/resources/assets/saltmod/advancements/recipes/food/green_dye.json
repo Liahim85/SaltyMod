@@ -1,0 +1,32 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:green_dye"
+        ]
+    },
+    "criteria": {
+        "has_saltwort": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:saltwort_seed"
+                    }
+                ]
+            }
+        },
+        "has_the_dye_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:green_dye"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_saltwort",
+            "has_the_dye_recipe"
+        ]
+    ]
+}

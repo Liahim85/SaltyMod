@@ -1,0 +1,69 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:carrot_pie",
+            "saltmod:apple_pie"
+        ]
+    },
+    "criteria": {
+        "has_sugar": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:sugar"
+                    }
+                ]
+            }
+        },
+        "has_egg": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:egg"
+                    }
+                ]
+            }
+        },
+        "has_the_carrot_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:carrot_pie"
+            }
+        },
+        "has_the_apple_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:apple_pie"
+            }
+        },
+        "has_the_cake_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:cake"
+            }
+        },
+        "has_the_sugar_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:sugar"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_sugar",
+            "has_the_sugar_recipe",
+            "has_the_carrot_recipe",
+            "has_the_apple_recipe"
+        ],
+        [
+            "has_egg",
+            "has_the_cake_recipe",
+            "has_the_carrot_recipe",
+            "has_the_apple_recipe"
+        ]
+    ]
+}

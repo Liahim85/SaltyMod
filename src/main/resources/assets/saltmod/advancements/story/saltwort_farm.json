@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:salt_dirt_lite",
+            "data": 0
+        },
+        "title": {
+            "translate": "advancements.saltwort_farm"
+        },
+        "description": {
+            "translate": "advancements.saltwort_farm.desc"
+        }
+    },
+    "parent": "saltmod:story/saltwort",
+    "criteria": {
+        "saltwort_farm": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:saltwort_seed"
+            }
+        }
+    }
+}

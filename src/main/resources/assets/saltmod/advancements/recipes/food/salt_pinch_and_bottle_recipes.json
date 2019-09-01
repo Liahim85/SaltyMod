@@ -1,0 +1,69 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:pickled_mushroom",
+            "saltmod:pickled_fern"
+        ]
+    },
+    "criteria": {
+        "has_salt_pinch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_pinch"
+                    }
+                ]
+            }
+        },
+        "has_bottle": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:glass_bottle"
+                    }
+                ]
+            }
+        },
+        "has_the_mushroom_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:pickled_mushroom"
+            }
+        },
+        "has_the_fern_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:pickled_fern"
+            }
+        },
+        "has_the_bottle_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:glass_bottle"
+            }
+        },
+        "has_the_salt_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_salt_pinch",
+            "has_the_salt_recipe",
+            "has_the_mushroom_recipe",
+            "has_the_fern_recipe"
+        ],
+        [
+            "has_bottle",
+            "has_the_bottle_recipe",
+            "has_the_mushroom_recipe",
+            "has_the_fern_recipe"
+        ]
+    ]
+}

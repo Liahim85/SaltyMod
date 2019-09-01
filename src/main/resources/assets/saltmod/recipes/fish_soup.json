@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "fish_soup",
+    "ingredients": [
+        {
+            "item": "minecraft:fish",
+            "data": 0
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:potato"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:fish_soup"
+    }
+}

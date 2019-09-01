@@ -1,0 +1,126 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_rabbit_stew_from_potato",
+            "saltmod:salt_rabbit_stew_from_rabbit",
+            "saltmod:salt_rabbit_stew_from_stew"
+        ]
+    },
+    "criteria": {
+        "has_bowl": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:bowl"
+                    }
+                ]
+            }
+        },
+        "has_salt_pinch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_pinch"
+                    }
+                ]
+            }
+        },
+        "has_rabbit": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:rabbit"
+                    }
+                ]
+            }
+        },
+        "has_rabbit_stew": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:rabbit_stew"
+                    }
+                ]
+            }
+        },
+        "has_the_bowl_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:bowl"
+            }
+        },
+        "has_the_stew_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:mushroom_stew"
+            }
+        },
+        "has_the_rabbit_stew_brown_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:rabbit_stew_from_brown_mushroom"
+            }
+        },
+        "has_the_rabbit_stew_red_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:rabbit_stew_from_red_mushroom"
+            }
+        },
+        "has_the_stew_from_potato_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_rabbit_stew_from_potato"
+            }
+        },
+        "has_the_stew_from_rabbit_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_rabbit_stew_from_rabbit"
+            }
+        },
+        "has_the_stew_from_stew_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_rabbit_stew_from_stew"
+            }
+        },
+        "has_the_salt_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_bowl",
+            "has_the_bowl_recipe",
+            "has_the_stew_recipe",
+            "has_the_stew_from_potato_recipe",
+            "has_the_stew_from_rabbit_recipe",
+            "has_the_stew_from_stew_recipe"
+        ],
+        [
+            "has_rabbit",
+            "has_rabbit_stew",
+            "has_the_rabbit_stew_brown_recipe",
+            "has_the_rabbit_stew_red_recipe",
+            "has_the_stew_from_potato_recipe",
+            "has_the_stew_from_rabbit_recipe",
+            "has_the_stew_from_stew_recipe"
+        ],
+        [
+            "has_salt_pinch",
+            "has_the_salt_recipe",
+            "has_the_stew_from_potato_recipe",
+            "has_the_stew_from_rabbit_recipe",
+            "has_the_stew_from_stew_recipe"
+        ]
+    ]
+}

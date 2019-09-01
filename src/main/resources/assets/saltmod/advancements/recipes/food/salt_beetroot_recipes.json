@@ -1,0 +1,69 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_beetroot",
+            "saltmod:salt_beetroot_soup_from_salt_beetroot"
+        ]
+    },
+    "criteria": {
+        "has_salt_pinch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_pinch"
+                    }
+                ]
+            }
+        },
+        "has_beetroot": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:beetroot"
+                    }
+                ]
+            }
+        },
+        "has_the_beetroot_soup_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:beetroot_soup"
+            }
+        },
+        "has_the_salt_beetroot_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_beetroot"
+            }
+        },
+        "has_the_soup_from_beetroot_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_beetroot_soup_from_salt_beetroot"
+            }
+        },
+        "has_the_salt_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_salt_pinch",
+            "has_the_salt_recipe",
+            "has_the_salt_beetroot_recipe",
+            "has_the_soup_from_beetroot_recipe"
+        ],
+        [
+            "has_beetroot",
+            "has_the_beetroot_soup_recipe",
+            "has_the_salt_beetroot_recipe",
+            "has_the_soup_from_beetroot_recipe"
+        ]
+    ]
+}

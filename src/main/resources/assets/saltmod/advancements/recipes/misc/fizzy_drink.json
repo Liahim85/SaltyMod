@@ -1,0 +1,53 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:fizzy_drink"
+        ]
+    },
+    "criteria": {
+        "has_soda": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:soda"
+                    }
+                ]
+            }
+        },
+        "has_bottle": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:glass_bottle"
+                    }
+                ]
+            }
+        },
+        "has_the_fizzy_drink_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:fizzy_drink"
+            }
+        },
+        "has_the_bottle_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "minecraft:glass_bottle"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_soda",
+            "has_the_fizzy_drink_recipe"
+        ],
+        [
+            "has_bottle",
+            "has_the_bottle_recipe",
+            "has_the_fizzy_drink_recipe"
+        ]
+    ]
+}

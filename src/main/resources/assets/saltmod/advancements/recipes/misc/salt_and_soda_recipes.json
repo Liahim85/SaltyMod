@@ -1,0 +1,62 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:mineral_mud",
+            "saltmod:salt_star"
+        ]
+    },
+    "criteria": {
+        "has_salt": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt"
+                    }
+                ]
+            }
+        },
+        "has_soda": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:soda"
+                    }
+                ]
+            }
+        },
+        "has_the_mud_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:mineral_mud"
+            }
+        },
+        "has_the_star_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_star"
+            }
+        },
+        "has_the_pinch_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_pinch_from_salt"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_soda",
+            "has_the_mud_recipe",
+            "has_the_star_recipe"
+        ],
+        [
+            "has_salt",
+            "has_the_pinch_recipe",
+            "has_the_mud_recipe",
+            "has_the_star_recipe"
+        ]
+    ]
+}

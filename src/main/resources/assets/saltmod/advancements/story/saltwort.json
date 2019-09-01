@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:saltwort_seed"
+        },
+        "title": {
+            "translate": "advancements.saltwort"
+        },
+        "description": {
+            "translate": "advancements.saltwort.desc"
+        }
+    },
+    "parent": "saltmod:story/root",
+    "criteria": {
+        "saltwort": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:saltwort_seed"
+                    }
+                ]
+            }
+        }
+    }
+}

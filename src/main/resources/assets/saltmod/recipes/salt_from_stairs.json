@@ -1,0 +1,14 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt",
+    "ingredients": [
+        {
+            "item": "saltmod:salt_brick_stairs",
+            "data": 0
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt",
+        "count": 9
+    }
+}

@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "grated_carrot",
+    "ingredients": [
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:sugar"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:grated_carrot"
+    }
+}

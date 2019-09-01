@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "saltwort_pie",
+    "ingredients": [
+        {
+            "item": "saltmod:saltwort_seed"
+        },
+        {
+            "item": "saltmod:saltwort_seed"
+        },
+        {
+            "item": "minecraft:wheat"
+        },
+        {
+            "item": "minecraft:egg"
+        }
+    ],
+    "result": {
+        "item": "saltmod:saltwort_pie"
+    }
+}

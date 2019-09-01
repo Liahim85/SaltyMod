@@ -1,0 +1,32 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_from_stairs"
+        ]
+    },
+    "criteria": {
+        "has_salt_stairs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt_brick_stairs"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_from_stairs"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_salt_stairs",
+            "has_the_recipe"
+        ]
+    ]
+}

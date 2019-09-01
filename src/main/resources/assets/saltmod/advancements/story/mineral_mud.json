@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:mineral_mud"
+        },
+        "title": {
+            "translate": "advancements.mineral_mud"
+        },
+        "description": {
+            "translate": "advancements.mineral_mud.desc"
+        }
+    },
+    "parent": "saltmod:story/root",
+    "criteria": {
+        "mineral_mud": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:mineral_mud"
+                    }
+                ]
+            }
+        }
+    }
+}
