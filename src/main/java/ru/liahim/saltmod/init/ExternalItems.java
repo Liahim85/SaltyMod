@@ -101,7 +101,7 @@ public class ExternalItems {
 			Item meefSteak = ForgeRegistries.ITEMS.getValue(new ResourceLocation("twilightforest", "cooked_meef"));
 			if (meefSteak != null) {
 				addRecipe("tf_salt_meef_steak", new ItemStack(ExItems.TF_SALT_MEFF_STEAK), new ItemStack(SaltItems.SALT_PINCH), new ItemStack(meefSteak));
-				addRecipe("tf_saltwort_meef_steak", new ItemStack(ExItems.TF_SALTWORT_VENISON), new ItemStack(meefSteak), new ItemStack(SaltItems.SALTWORT_SEED), new ItemStack(SaltItems.SALTWORT_SEED), new ItemStack(Items.BOWL));
+				addRecipe("tf_saltwort_meef_steak", new ItemStack(ExItems.TF_SALTWORT_MEEF_STEAK), new ItemStack(meefSteak), new ItemStack(SaltItems.SALTWORT_SEED), new ItemStack(SaltItems.SALTWORT_SEED), new ItemStack(Items.BOWL));
 			}
 			Item meefStroganoff = ForgeRegistries.ITEMS.getValue(new ResourceLocation("twilightforest", "meef_stroganoff"));
 			if (meefStroganoff != null) addRecipe("tf_salt_meef_stroganoff", new ItemStack(ExItems.TF_SALT_MEEF_STROGANOFF), new ItemStack(SaltItems.SALT_PINCH), new ItemStack(meefStroganoff));
