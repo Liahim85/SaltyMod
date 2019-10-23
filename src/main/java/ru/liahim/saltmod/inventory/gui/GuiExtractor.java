@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map.Entry;
 import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.RenderHelper;
@@ -144,7 +145,7 @@ public class GuiExtractor extends GuiContainer {
 		float g = (color >> 8 & 255) / 255.0F;
 		float b = (color & 255) / 255.0F;
 		GL11.glColor4f(r, g, b, 1.0f);
-		this.drawModalRectWithCustomSizedTexture(w + wp, h + hp + 32 - amount, sprite.getOriginX() * 2, sprite.getOriginY() * 2 + 32 - amount, width, amount, tWidth * 2, tHeight * 2);
+		Gui.drawModalRectWithCustomSizedTexture(w + wp, h + hp + 32 - amount, sprite.getOriginX() * 2, sprite.getOriginY() * 2 + 32 - amount, width, amount, tWidth * 2, tHeight * 2);
 		//this.drawTexturedModalRect(w + wp, h + hp + 32 - amount, sprite, width, amount);
 		GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 	}
