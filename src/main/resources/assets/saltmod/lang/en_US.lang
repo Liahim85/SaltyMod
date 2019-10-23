@@ -1,29 +1,33 @@
-﻿
+﻿# English - UNITED STATES (US) (en_US) localization
+# =====================================
+# Original translation by Liahim
+# Improved by RGSW
+
 itemGroup.salt_tab=Salt
 
 tile.salt_ore.name=Salt Ore
-tile.salt_lake.name=Salt Lake Bottom
+tile.salt_lake.name=Salt Lake Block
 tile.salt_block.name=Block Of Salt
 tile.salt_block_chiseled.name=Chiseled Salt Block
-tile.salt_block_pillar.name=Pillar Salt Block
-tile.salt_brick.name=Salt Brick
+tile.salt_block_pillar.name=Salt Pillar
+tile.salt_brick.name=Salt Bricks
 tile.salt_block_cracked.name=Cracked Salt Block
-tile.salt_brick_cracked.name=Cracked Salt Brick
-tile.salt_brick_chiseled.name=Chiseled Salt Brick
+tile.salt_brick_cracked.name=Cracked Salt Bricks
+tile.salt_brick_chiseled.name=Chiseled Salt Bricks
 tile.salt_chapiter.name=Salt Chapiter
 tile.salt_lamp.name=Salt Lamp
-tile.salt_brick_stairs.name=Salt Brick Stairs
+tile.salt_brick_stairs.name=Salt Bricks Stairs
 tile.salt_slab_block.name=Salt Slab
-tile.salt_slab_brick.name=Salt Brick Slab
-tile.salt_slab_pillar.name=Short Pillar Salt Block
+tile.salt_slab_brick.name=Salt Bricks Slab
+tile.salt_slab_pillar.name=Short Salt Pillar
 tile.salt_crystal.name=Salt Crystals
-tile.salt_dirt_lake.name=Salt Lake Bottom
+tile.salt_dirt_lake.name=Dirt Salt Lake Block
 tile.salt_dirt.name=Saline Soil
 tile.salt_dirt_lite.name=Slightly Saline Soil
-tile.salt_grass.name=Overgrown Slightly Saline Soil
+tile.salt_grass.name=Grassy Semi-Saline Soil
 tile.saltwort.name=Saltwort
 tile.mud_block.name=Mineral Mud Block
-tile.salt_pot.name=Flower Pot
+tile.salt_pot.name=Salty Flower Pot
 
 tile.extractor.name=Evaporator
 container.extractor=Evaporator
@@ -96,16 +100,16 @@ item.salt_beetroot.name=Salty Beetroot
 item.salt_beetroot_soup.name=Salty Beetroot Soup
 item.beetroot_salad.name=Beetroot Salad
 item.salt_beetroot_salad.name=Salty Beetroot Salad
-item.hufc.name=Herring under a Fur Coat
-item.salt_hufc.name=Salty Herring under a Fur Coat
+item.hufc.name=Herring Under A Fur Coat
+item.salt_hufc.name=Salty Herring Under A Fur Coat
 
 item.mud_helmet.name=Head Mud Mask
 item.mud_chestplate.name=Body Mud Mask
 item.mud_leggings.name=Legs Mud Mask
 item.mud_boots.name=Foot Mud Mask
 
-item.fizzy_drink.tooltip=Removes spells and extinguishes the fire
-item.muffin.tooltip=For dessert!
+item.fizzy_drink.tooltip=Removes spells and extinguishes fire
+item.muffin.tooltip=As dessert!
 item.muffin.mess.0=Bon Appetit!
 item.muffin.mess.1=Mmm... So tasty!
 item.muffin.mess.2=Om Nom Nom
@@ -130,7 +134,7 @@ advancements.root=Salt
 advancements.salt=Salt!
 advancements.salt.desc=Get salt
 advancements.salt_farm=Salty farmer
-advancements.salt_farm.desc=Gather the harvest from the salt farm
+advancements.salt_farm.desc=Harvest the salt farm
 advancements.rain=Rainmaker
 advancements.rain.desc=Call the rain
 advancements.mineral_mud=Something black and viscous
@@ -142,20 +146,20 @@ advancements.discomfiture.desc=Rinse off the mineral mask
 advancements.saltwort=Is there life on salt?
 advancements.saltwort.desc=Find saltwort
 advancements.saltwort_farm=God of melioration
-advancements.saltwort_farm.desc=Fertilize the block of soil with a growing saltwort
+advancements.saltwort_farm.desc=Fertilize a soil block with growing saltwort
 advancements.fizzy_drink=Cool the ardor
-advancements.fizzy_drink.desc=Extinguish himself with Fizzy Drink
+advancements.fizzy_drink.desc=Extinguish yourself with Fizzy Drink
 advancements.muffin=Fed up
 advancements.muffin.desc=Get a saturation effect after eating a muffin
-advancements.more_buckets=More 10,000 buckets!
-advancements.more_buckets.desc=Obtain salt with evaporator
+advancements.more_buckets=10,000 more buckets!
+advancements.more_buckets.desc=Obtain salt with an evaporator
 advancements.salt_crystal_get=More than salt
-advancements.salt_crystal_get.desc=Obtain the salt crystals
+advancements.salt_crystal_get.desc=Obtain salt crystals
 advancements.salt_witch=Achilles' heel
-advancements.salt_witch.desc=Kill the witch with a salt crystals in hand
+advancements.salt_witch.desc=Kill a witch with a salt crystals in your hand
 advancements.salt_slime=Escargot
-advancements.salt_slime.desc=Kill the slime with a salt crystals in hand
+advancements.salt_slime.desc=Kill a slime with a salt crystals in your hand
 advancements.salt_lake=Crunching underfoot
-advancements.salt_lake.desc=Go along the salt lake bottom
+advancements.salt_lake.desc=Walk over a salt lake
 advancements.salt_crystal=Wonder of Nature
-advancements.salt_crystal.desc=Find the salt crystals in deep caves
+advancements.salt_crystal.desc=Find salt crystals in the deep, dark caves

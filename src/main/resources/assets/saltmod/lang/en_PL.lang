@@ -1,0 +1,164 @@
+﻿# Polish (PL) (en_PL) localization
+# ======================================
+# Translation by MajsterKuzco
+
+itemGroup.salt_tab=Sól
+
+tile.salt_ore.name=Ruda Soli
+tile.salt_lake.name=Dno Solnego Jeziora
+tile.salt_block.name=Blok Soli
+tile.salt_block_chiseled.name=Rzeźbiony Blok Soli
+tile.salt_block_pillar.name=Filar Bloku Soli
+tile.salt_brick.name=Solne Cegły
+tile.salt_block_cracked.name=Popękany Blok Soli
+tile.salt_brick_cracked.name=Popękane Solne Cegły
+tile.salt_brick_chiseled.name=Rzeźbione Solne Cegły
+tile.salt_chapiter.name=Solny Kapiter
+tile.salt_lamp.name=Solna Lampa
+tile.salt_brick_stairs.name=Schody z Solnych Cegieł
+tile.salt_slab_block.name=Płyta Soli
+tile.salt_slab_brick.name=Płyta Solnych Cegieł
+tile.salt_slab_pillar.name=Krótki Solny Filar
+tile.salt_crystal.name=Kryształki Soli
+tile.salt_dirt_lake.name=Ziemiste Dno Solnego Jeziora
+tile.salt_dirt.name=Zasolona Ziemia
+tile.salt_dirt_lite.name=Lekko Zasolona Ziemia
+tile.salt_grass.name=Zarośnięta Lekko zasolona ziemia
+tile.saltwort.name=Solarka
+tile.mud_block.name=Blok Mineralnego Błota
+tile.salt_pot.name=Doniczka
+
+tile.extractor.name=Parownik
+container.extractor=Parownik
+container.discard=Odrzuć
+fluid.milk=Mleko
+
+item.salt.name=Sól
+item.salt_pinch.name=Szczypta Soli
+item.saltwort_seed.name=Solarka
+item.soda.name=Musujący pył
+item.mineral_mud.name=Mineralne Błoto
+item.powdered_milk.name=Mleko w Proszku
+item.salt_star.name=Gwiazda Solna
+item.rainmaker.name=Deszczorób
+item.rainmaker.tooltip=Powinien wybuchnąć nad chmurami
+item.hemoglobin.name=Hemoglobina
+
+item.salt_beef_cooked.name=Słony Stek
+item.salt_porkchop_cooked.name=Słony Pieczony Schab
+item.salt_potato_baked.name=Słony pieczony Ziemniak
+item.salt_chicken_cooked.name=Słony Pieczony Kurczak
+item.salt_fish_cod.name=Słona Ryba
+item.salt_fish_cod_cooked.name=Słona Pieczona Ryba
+item.salt_fish_salmon.name=Słony Łosoś
+item.salt_fish_salmon_cooked.name=Słony Pieczony Łosoś 
+item.salt_fish_clownfish.name=Słony Błazenek
+item.salt_mushroom_stew.name=Słona Zupa Grzybowa
+item.corned_beef.name=Zakonserwowana Wołowina
+item.salt_bread.name=Słony Chleb
+item.salt_egg.name=Jajko Gotowane na Mięko
+item.pumpkin_porridge.name=Owsianka Dyniowa
+item.vegetable_stew.name=Duszone Warzywa
+item.salt_vegetable_stew.name=Słone Duszone Warzywa
+item.potato_mushroom.name=Ziemniaki z Grzybkami
+item.salt_potato_mushroom.name=Słone Ziemniaki z Grzybkami
+item.fish_soup.name=Zupa Rybna
+item.salt_fish_soup.name=Słona Zupa Rybna
+item.fish_salmon_soup.name=Zupa z Łososia
+item.salt_fish_salmon_soup.name=Słona Zupa z Łososia
+item.saltwort_beef.name=Stek z Solarką
+item.saltwort_porkchop.name=Pieczony Schab z Solarką
+item.dandelion_salad.name=Sałatka Mleczowa
+item.salt_dandelion_salad.name=Słona Sałatka Mleczowa
+item.wheat_sprouts.name=Kiełki Pszenicy
+item.salt_wheat_sprouts.name=Słone Kiełki Pszenicy
+item.fruit_salad.name=Sałatka Owocowa
+item.grated_carrot.name=Tarta Marchew
+item.carrot_pie.name=Marchewkowiec
+item.apple_pie.name=Jabłecznik
+item.potato_pie.name=Ziemniacznik
+item.onion_pie.name=Cebulowe Ciasto
+item.fish_pie.name=Ciasto Rybne
+item.fish_salmon_pie.name=Ciasto Łososiowe
+item.mushroom_pie.name=Ciasto Grzybowe
+item.pickled_mushroom.name=Kiszone Grzyby
+item.pickled_fern.name=Kiszona Paproć
+item.saltwort_salad.name=Sałatka Solarkowa
+item.saltwort_pie.name=Ciasto Solarkowe
+item.fermented_saltwort.name=Sfermentowana Solarka
+item.fizzy_drink.name=Napój Gazowany
+item.muffin.name=Mufinka
+item.escargot.name=Ślimak po Burgundzku
+
+item.salt_mutton_cooked.name=Słona Pieczona Baranina
+item.saltwort_mutton.name=Pieczona Baranina z Solarką
+item.salt_rabbit_cooked.name=Słony Pieczony Królik
+item.salt_rabbit_stew.name=Słona Zupa Krulicza
+
+item.salt_beetroot.name=Słony Burak
+item.salt_beetroot_soup.name=Słony Barszczyk
+item.beetroot_salad.name=Sałatka Buraczkowa
+item.salt_beetroot_salad.name=Słona Sałatka Buraczkowa
+item.hufc.name=Śledź pod Futrem
+item.salt_hufc.name=Słony Śledź pod Futrem
+
+item.mud_helmet.name=Maseczka Błotna
+item.mud_chestplate.name=Maseczka Błotna na Tors
+item.mud_leggings.name=Maseczka Błotna na Nogi
+item.mud_boots.name=Maseczka Błotna na Stopy
+
+item.fizzy_drink.tooltip=Removes spells and extinguishes the fire
+item.muffin.tooltip=Na Deser!
+item.muffin.mess.0=Bon Appetit!
+item.muffin.mess.1=Mmm... Pychota!
+item.muffin.mess.2=Om Nom Nom
+item.muffin.mess.3=Pyszotka!
+
+item.tf_salt_venison_cooked.name=Słona Pieczona Dziczyzna
+item.tf_salt_meef_steak.name=Słona Pieczona Minowołowina 
+item.tf_salt_meef_stroganoff.name=Słony Minostrogonof
+item.tf_salt_hydra_chop.name=Słona Szynka Hydry
+item.tf_pickled_mushgloom.name=Kiszony Świecogrzyb
+item.tf_saltwort_venison.name=Pieczona Dziczyzna z Solarią
+item.tf_saltwort_meef_steak.name=Pieczona Minowołowina z Solarią
+
+item.bop_poison.name=Trucizna
+item.bop_salt_salad_veggie.name=Słona Wegańska Sałatka
+item.bop_salt_salad_shroom.name=Słona Grzybkowa Sałatka
+item.bop_salt_rice_bowl.name=Słona Miska Ryżu
+item.bop_pickled_turnip.name=Kiszona Rzepa
+item.bop_salt_shroom_powder.name=Słony Proch Grzybkowy
+
+advancements.root=Sól
+advancements.salt=Sól!
+advancements.salt.desc=Zbierz sól
+advancements.salt_farm=Farmer soli
+advancements.salt_farm.desc=Zbierz plony z farmy soli
+advancements.rain=Deszczorób
+advancements.rain.desc=Zanosi się na deszcz
+advancements.mineral_mud=Coś czarnego i złośliwego
+advancements.mineral_mud.desc=Zdobądź błoto mineralne lub zmieszaj sól, musujący pył, gline i węgiel
+advancements.full_mud=Piękny i zdrowy
+advancements.full_mud.desc=Załóż błotną maseczkę
+advancements.discomfiture=Porażka
+advancements.discomfiture.desc=Zdejmij błotną maseczkę
+advancements.saltwort=Czy istnieje tam życie czy tylko sól?
+advancements.saltwort.desc=Znajdź solarke
+advancements.saltwort_farm=Bóg melioracji
+advancements.saltwort_farm.desc=Nawieź blok gleby rosnącą solą morską
+advancements.fizzy_drink=Ostudź żar
+advancements.fizzy_drink.desc=Ugaś pragnienie napojem gazowanym
+advancements.muffin=Dość
+advancements.muffin.desc=Dostań efekt saturacji po zjedzeniu mufinki
+advancements.more_buckets=Więcej niż 10,000 wiader!
+advancements.more_buckets.desc=Zdobądz sól przez odparowanie
+advancements.salt_crystal_get=Więcej niż sól
+advancements.salt_crystal_get.desc=Zdobądź kryształy soli
+advancements.salt_witch=Pięta Achillesowa
+advancements.salt_witch.desc=Zabij wiedźme z kryształkami soli w ręce
+advancements.salt_slime=Ślimak
+advancements.salt_slime.desc=Zabij szlama z kryształkami soli w ręce
+advancements.salt_lake=Chrupanie pod stopami
+advancements.salt_lake.desc=Zanurkuj na dno solnego jeziora
+advancements.salt_crystal=Cód natury
+advancements.salt_crystal.desc=Znajdź kryształy soli w głębokich jaskiniach

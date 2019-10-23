@@ -1,4 +1,8 @@
-﻿
+﻿# РУССКИЙ (RU) (ru_RU) localization
+# =====================================
+# Translation by Liahim
+#
+
 itemGroup.salt_tab=Соль
 
 tile.salt_ore.name=Каменная соль
