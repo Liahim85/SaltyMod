@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "cod_soup",
+    "ingredients": [
+        {
+            "tag": "forge:fishes/cod"
+        },
+        {
+            "tag": "forge:crops/carrot"
+        },
+        {
+            "tag": "forge:crops/potato"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:cod_soup"
+    }
+}

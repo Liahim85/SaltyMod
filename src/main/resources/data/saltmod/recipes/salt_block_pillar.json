@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "salt_block_pillar",
+    "pattern": [
+        "X",
+        "X"
+    ],
+    "key": {
+        "X": {
+            "item": "saltmod:salt_block"
+        }
+    },
+    "result": {
+        "item": "saltmod:salt_block_pillar",
+        "count": 2
+    }
+}

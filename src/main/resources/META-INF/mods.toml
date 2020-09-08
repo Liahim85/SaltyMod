@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+issueTrackerURL="https://github.com/Liahim85/SaltyMod/issues"
+[[mods]]
+modId="saltmod"
+version="${file.jarVersion}"
+displayName="Salty Mod"
+updateJSONURL="https://gist.githubusercontent.com/Liahim85/7a650fb7d6b742bf8812b9bb0dadc2b3/raw/salt_updates.json"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/saltymod"
+logoFile="logo.png"
+credits="Liahim"
+authors="Liahim"
+description='''Salt for everyone!'''
+[[dependencies.saltymod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.saltymod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

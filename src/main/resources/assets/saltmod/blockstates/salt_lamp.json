@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "saltmod:salt_lamp" }
+        "": { "model": "saltmod:block/salt_lamp" }
     }
 }

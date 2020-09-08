@@ -1,0 +1,10 @@
+{
+  "type": "saltmod:evaporating",
+  "group": "powdered_milk",
+  "ingredient": {
+    "fluid": "milk",
+    "amount": 1000
+  },
+  "result": "saltmod:powdered_milk",
+  "experience": 0.1
+}

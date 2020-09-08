@@ -1,8 +1,0 @@
-{
-    "ingredients": {
-        "potion_bottle": "ru.liahim.saltmod.crafting.ingredient.PotionTypeIngredientFactory"
-    },
-    "recipes": {
-        "non_remaining_shapeless": "ru.liahim.saltmod.crafting.recipe.NonRemainingShapelessRecipes$Factory"
-    }
-}

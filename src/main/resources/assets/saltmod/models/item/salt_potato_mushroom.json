@@ -1,6 +1,7 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"saltmod:items/salt_potato_mushroom"
+        "layer0":"saltmod:item/potato_mushroom",
+        "layer1":"saltmod:item/salt_0"
     }
 }

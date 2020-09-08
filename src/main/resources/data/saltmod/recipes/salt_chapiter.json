@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "salt_chapiter",
+    "pattern": [
+        "X",
+        "X"
+    ],
+    "key": {
+        "X": {
+            "item": "saltmod:salt_slab_pillar"
+        }
+    },
+    "result": {
+        "item": "saltmod:salt_chapiter"
+    }
+}

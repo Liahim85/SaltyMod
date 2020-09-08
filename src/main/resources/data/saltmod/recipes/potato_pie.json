@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "potato_pie",
+    "ingredients": [
+        {
+            "tag": "forge:crops/potato"
+        },
+        {
+            "tag": "forge:crops/potato"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "tag": "forge:eggs"
+        }
+    ],
+    "result": {
+        "item": "saltmod:potato_pie"
+    }
+}

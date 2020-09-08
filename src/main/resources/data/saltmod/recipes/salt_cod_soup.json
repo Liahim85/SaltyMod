@@ -1,0 +1,15 @@
+{ 
+    "type": "saltmod:non_remaining_shapeless",
+    "group": "salt_cod_soup",
+    "ingredients": [
+        {
+            "item": "saltmod:cod_soup"
+        },
+        {
+            "tag": "saltmod:salt"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_cod_soup"
+    }
+}

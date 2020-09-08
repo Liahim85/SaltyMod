@@ -1,0 +1,10 @@
+{
+  "type": "saltmod:evaporating",
+  "group": "salt_pinch",
+  "ingredient": {
+    "fluid": "minecraft:water",
+    "amount": 1000
+  },
+  "result": "saltmod:salt_pinch",
+  "experience": 0.1
+}

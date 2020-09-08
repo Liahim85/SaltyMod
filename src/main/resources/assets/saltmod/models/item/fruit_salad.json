@@ -1,6 +1,6 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"saltmod:items/fruit_salad"
+        "layer0":"saltmod:item/fruit_salad"
     }
 }

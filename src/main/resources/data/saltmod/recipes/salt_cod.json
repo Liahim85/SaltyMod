@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_cod",
+    "ingredients": [
+        {
+            "item": "minecraft:cod"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "tag": "saltmod:salt"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_cod"
+    }
+}

@@ -1,12 +1,12 @@
 {
     "parent": "block/cube",
     "textures": {
-        "particle": "saltmod:blocks/salt_dirt_lite_side",
-        "down": "saltmod:blocks/salt_dirt_lite_bottom",
-        "up": "saltmod:blocks/salt_dirt_lite_0",
-        "north": "saltmod:blocks/salt_dirt_lite_side",
-        "east": "saltmod:blocks/salt_dirt_lite_side",
-        "south": "saltmod:blocks/salt_dirt_lite_side",
-        "west": "saltmod:blocks/salt_dirt_lite_side"
+        "particle": "saltmod:block/salt_dirt_lite_side",
+        "down": "saltmod:block/salt_dirt_lite_bottom",
+        "up": "saltmod:block/salt_dirt_lite_0",
+        "north": "saltmod:block/salt_dirt_lite_side",
+        "east": "saltmod:block/salt_dirt_lite_side",
+        "south": "saltmod:block/salt_dirt_lite_side",
+        "west": "saltmod:block/salt_dirt_lite_side"
     }
 }

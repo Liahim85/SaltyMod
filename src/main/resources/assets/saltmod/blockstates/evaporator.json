@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "facing=north,lit=normal": { "model": "saltmod:block/evaporator" },
+        "facing=south,lit=normal": { "model": "saltmod:block/evaporator", "y": 180 },
+        "facing=west,lit=normal":  { "model": "saltmod:block/evaporator", "y": 270 },
+        "facing=east,lit=normal":  { "model": "saltmod:block/evaporator", "y": 90 },
+        "facing=north,lit=lit":	   { "model": "saltmod:block/evaporator_lit" },
+        "facing=south,lit=lit":	   { "model": "saltmod:block/evaporator_lit", "y": 180 },
+        "facing=west,lit=lit":     { "model": "saltmod:block/evaporator_lit", "y": 270 },
+        "facing=east,lit=lit":     { "model": "saltmod:block/evaporator_lit", "y": 90 },
+        "facing=north,lit=steam":  { "model": "saltmod:block/evaporator_lit" },
+        "facing=south,lit=steam":  { "model": "saltmod:block/evaporator_lit", "y": 180 },
+        "facing=west,lit=steam":   { "model": "saltmod:block/evaporator_lit", "y": 270 },
+        "facing=east,lit=steam":   { "model": "saltmod:block/evaporator_lit", "y": 90 }
+    }
+}

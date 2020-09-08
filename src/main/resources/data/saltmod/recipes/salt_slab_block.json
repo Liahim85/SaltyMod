@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "salt_slab_block",
+    "pattern": [
+        "XXX"
+    ],
+    "key": {
+        "X": {
+            "item": "saltmod:salt_block"
+        }
+    },
+    "result": {
+        "item": "saltmod:salt_slab_block",
+        "count": 6
+    }
+}

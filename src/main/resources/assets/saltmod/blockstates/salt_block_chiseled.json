@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "saltmod:block/salt_block_chiseled" }
+    }
+}

@@ -1,6 +1,7 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"saltmod:items/salt_beetroot_soup"
+        "layer0":"item/beetroot_soup",
+        "layer1":"saltmod:item/salt_0"
     }
 }

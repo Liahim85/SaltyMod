@@ -1,0 +1,15 @@
+{ 
+    "type": "saltmod:non_remaining_shapeless",
+    "group": "salt_vegetable_stew",
+    "ingredients": [
+        {
+            "item": "saltmod:vegetable_stew"
+        },
+        {
+            "tag": "saltmod:salt"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_vegetable_stew"
+    }
+}

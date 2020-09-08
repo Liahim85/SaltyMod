@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "saltmod:block/evaporator_fase_on",
+        "down": "block/furnace_top",
+        "up": "saltmod:block/evaporator_top",
+        "north": "saltmod:block/evaporator_fase_on",
+        "east": "block/furnace_side",
+        "south": "block/furnace_side",
+        "west": "block/furnace_side"
+    }
+}

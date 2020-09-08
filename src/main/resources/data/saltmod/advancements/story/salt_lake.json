@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:salt_lake"
+        },
+        "title": {
+            "translate": "advancements.saltmod.salt_lake"
+        },
+        "description": {
+            "translate": "advancements.saltmod.salt_lake.desc"
+        },
+        "frame": "challenge"
+    },
+    "parent": "saltmod:story/root",
+    "criteria": {
+        "salt_lake": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:salt_lake"
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent":"item/generated",
+    "textures": {
+        "layer0":"saltmod:item/cod_soup",
+        "layer1":"saltmod:item/salt_0"
+    }
+}

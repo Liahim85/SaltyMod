@@ -4,64 +4,57 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Items;
-import net.minecraft.item.EnumAction;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
+import net.minecraft.util.Hand;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
-import ru.liahim.saltmod.api.item.SaltItems;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import ru.liahim.saltmod.init.ModAdvancements;
+import ru.liahim.saltmod.init.ModItems;
 import ru.liahim.saltmod.init.SaltConfig;
 
-public class FizzyDrink extends Item {
+public class FizzyDrink extends SaltBottle {
 
 	public FizzyDrink() {
-		this.setMaxStackSize(1);
+		super(new Item.Properties().maxStackSize(1));
 	}
 
 	@Override
-	public void addInformation(ItemStack stack, @Nullable World world, List<String> tooltip, ITooltipFlag flag) {
-		tooltip.add(I18n.format(getUnlocalizedName() + ".tooltip"));
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> tooltip, ITooltipFlag flag) {
+		tooltip.add(new TranslationTextComponent(this.getDefaultTranslationKey() + ".tooltip"));
 	}
 
 	@Override
-	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving) {
-		EntityPlayer player = entityLiving instanceof EntityPlayer ? (EntityPlayer) entityLiving : null;
-		if (!worldIn.isRemote) {
-			if (SaltConfig.fizzyEffect) entityLiving.clearActivePotions();
-			else entityLiving.curePotionEffects(new ItemStack(Items.MILK_BUCKET));
-			if (entityLiving.isBurning()) {
-				if (player instanceof EntityPlayerMP) ModAdvancements.SALT_COMMON.trigger((EntityPlayerMP)player, new ItemStack(SaltItems.FIZZY_DRINK));
-				entityLiving.extinguish();
+	public ItemStack onItemUseFinish(ItemStack stack, World world, LivingEntity entity) {
+		if (!world.isRemote) {
+			if (SaltConfig.Game.fizzyEffect.get()) entity.clearActivePotions();
+			else entity.curePotionEffects(new ItemStack(Items.MILK_BUCKET));
+			if (entity.isBurning()) {
+				if (entity instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)entity, new ItemStack(ModItems.FIZZY_DRINK));
+				entity.extinguish();
 			}
 		}
-		if ((player != null && !player.isCreative()) || player == null) {
-			return new ItemStack(Items.GLASS_BOTTLE);
-		}
-		return stack;
+		return super.onItemUseFinish(stack, world, entity);
 	}
 
 	@Override
-	public int getMaxItemUseDuration(ItemStack item) {
-		return 32;
+	public int getUseDuration(ItemStack item) {
+		return 16;
 	}
 
 	@Override
-	public EnumAction getItemUseAction(ItemStack item) {
-		return EnumAction.DRINK;
-	}
-
-	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
 		player.setActiveHand(hand);
-		return new ActionResult(EnumActionResult.SUCCESS, player.getHeldItem(hand));
+        return ActionResult.resultConsume(player.getHeldItem(hand));
 	}
 }

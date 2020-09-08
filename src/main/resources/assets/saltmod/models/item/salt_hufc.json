@@ -1,6 +1,7 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"saltmod:items/salt_hufc"
+        "layer0":"saltmod:item/hufc",
+        "layer1":"saltmod:item/salt_0"
     }
 }

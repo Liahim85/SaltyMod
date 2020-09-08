@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "variant=clear": { "model": "saltmod:block/salt_dirt_lake" },
+        "variant=side_n": { "model": "saltmod:block/salt_dirt_lake_n" },
+        "variant=side_e": { "model": "saltmod:block/salt_dirt_lake_n", "y": 90, "uvlock": true },
+        "variant=side_s": { "model": "saltmod:block/salt_dirt_lake_n", "y": 180, "uvlock": true },
+        "variant=side_w": { "model": "saltmod:block/salt_dirt_lake_n", "y": 270, "uvlock": true },
+        "variant=side_ne": { "model": "saltmod:block/salt_dirt_lake_ne" },
+        "variant=side_es": { "model": "saltmod:block/salt_dirt_lake_ne", "y": 90, "uvlock": true },
+        "variant=side_sw": { "model": "saltmod:block/salt_dirt_lake_ne", "y": 180, "uvlock": true },
+        "variant=side_wn": { "model": "saltmod:block/salt_dirt_lake_ne", "y": 270, "uvlock": true },
+        "variant=side_ns": { "model": "saltmod:block/salt_dirt_lake_ns" },
+        "variant=side_we": { "model": "saltmod:block/salt_dirt_lake_ns", "y": 90, "uvlock": true },
+        "variant=side_nes": { "model": "saltmod:block/salt_dirt_lake_nes" },
+        "variant=side_esw": { "model": "saltmod:block/salt_dirt_lake_nes", "y": 90, "uvlock": true },
+        "variant=side_swn": { "model": "saltmod:block/salt_dirt_lake_nes", "y": 180, "uvlock": true },
+        "variant=side_wne": { "model": "saltmod:block/salt_dirt_lake_nes", "y": 270, "uvlock": true },
+        "variant=side_nesw": { "model": "saltmod:block/salt_dirt_lake_nesw" }
+    }
+}

@@ -1,0 +1,12 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "green_dye",
+    "ingredients": [
+        {
+            "tag": "forge:seeds/saltwort"
+        }
+    ],
+    "result": {
+        "item": "minecraft:green_dye"
+    }
+}

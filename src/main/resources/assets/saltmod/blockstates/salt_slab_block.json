@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "saltmod:block/salt_slab_block_bottom" },
+        "type=top":    { "model": "saltmod:block/salt_slab_block_top" },
+        "type=double": { "model": "saltmod:block/salt_slab_block" }
+    }
+}

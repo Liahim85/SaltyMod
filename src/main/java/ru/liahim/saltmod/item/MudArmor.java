@@ -2,89 +2,81 @@ package ru.liahim.saltmod.item;
 
 import java.util.Random;
 
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.world.World;
-import ru.liahim.saltmod.api.item.SaltItems;
 import ru.liahim.saltmod.init.ModAdvancements;
+import ru.liahim.saltmod.init.ModArmorMaterials;
+import ru.liahim.saltmod.init.ModItemGroups;
+import ru.liahim.saltmod.init.ModItems;
 import ru.liahim.saltmod.init.SaltConfig;
 
-public class MudArmor extends ItemArmor {
+public class MudArmor extends ArmorItem {
 
-	public MudArmor(ArmorMaterial material, EntityEquipmentSlot type) {
-		super(material, 0, type);
+	public MudArmor(EquipmentSlotType slot) {
+		super(ModArmorMaterials.MUD_MATERIAL, slot, new Properties().group(ModItemGroups.MOD_ITEM_GROUP));
 	}
 
 	@Override
-	public boolean getIsRepairable(ItemStack toRepair, ItemStack material) {
-		return material.getItem() == SaltItems.MINERAL_MUD || super.getIsRepairable(toRepair, material);
-	}
-
-	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
-		if (!world.isRemote && !stack.isEmpty() && SaltConfig.mudArmorWaterDam) {
-			Random rand = new Random();
-
-			if (stack.getItem() == SaltItems.MUD_HELMET) {
-				if (((world.isRaining() && player.isWet() && !player.isInsideOfMaterial(Material.WATER)) || player
-						.isInsideOfMaterial(Material.WATER)) && rand.nextInt(100) == 0) {
-					stack.damageItem(1, player);
+	public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean isSelected) {
+		if (slot == this.getEquipmentSlot().getIndex() && !world.isRemote && !stack.isEmpty()
+				&& SaltConfig.Game.mudArmorWaterDam.get() && entity instanceof LivingEntity) {
+			LivingEntity living = (LivingEntity) entity;
+			Random rand = living.getRNG();
+			if (slot == EquipmentSlotType.HEAD.getIndex() && stack.getItem() == ModItems.MUD_HELMET) {
+				if (((world.isRaining() && living.isWet() && !living.areEyesInFluid(FluidTags.WATER)) || living
+						.areEyesInFluid(FluidTags.WATER)) && rand.nextInt(100) == 0) {
+					stack.damageItem(1, living, le -> le.sendBreakAnimation(EquipmentSlotType.HEAD));
 				}
-
-				if (stack.getItemDamage() >= stack.getMaxDamage()) {
-					player.setItemStackToSlot(EntityEquipmentSlot.HEAD, ItemStack.EMPTY);
-					if (player instanceof EntityPlayerMP) ModAdvancements.SALT_COMMON.trigger((EntityPlayerMP)player, new ItemStack(SaltItems.MINERAL_MUD));
+				if (stack.getDamage() >= stack.getMaxDamage()) {
+					living.setItemStackToSlot(EquipmentSlotType.HEAD, ItemStack.EMPTY);
+					if (living instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)living, new ItemStack(ModItems.MINERAL_MUD));
 				}
 			}
 
-			if (stack.getItem() == SaltItems.MUD_CHESTPLATE) {
-				if ((world.isRaining() || (player.isInsideOfMaterial(Material.WATER) && player.isInWater()))
-						&& player.isWet() && rand.nextInt(100) == 0) {
-					stack.damageItem(1, player);
+			if (slot == EquipmentSlotType.CHEST.getIndex() && stack.getItem() == ModItems.MUD_CHESTPLATE) {
+				if ((world.isRaining() || (living.areEyesInFluid(FluidTags.WATER) && living.isInWater()))
+						&& living.isWet() && rand.nextInt(100) == 0) {
+					stack.damageItem(1, living, le -> le.sendBreakAnimation(EquipmentSlotType.CHEST));
 				}
-
-				if (!world.isRaining() && !player.isInsideOfMaterial(Material.WATER) && player.isInWater()
-						&& player.isWet() && rand.nextInt(200) == 0) {
-					stack.damageItem(1, player);
+				if (!world.isRaining() && !living.areEyesInFluid(FluidTags.WATER) && living.isInWater()
+						&& living.isWet() && rand.nextInt(200) == 0) {
+					stack.damageItem(1, living, le -> le.sendBreakAnimation(EquipmentSlotType.CHEST));
 				}
-
-				if (stack.getItemDamage() >= stack.getMaxDamage()) {
-					player.setItemStackToSlot(EntityEquipmentSlot.CHEST, ItemStack.EMPTY);
-					if (player instanceof EntityPlayerMP) ModAdvancements.SALT_COMMON.trigger((EntityPlayerMP)player, new ItemStack(SaltItems.MINERAL_MUD));
+				if (stack.getDamage() >= stack.getMaxDamage()) {
+					living.setItemStackToSlot(EquipmentSlotType.CHEST, ItemStack.EMPTY);
+					if (living instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)living, new ItemStack(ModItems.MINERAL_MUD));
 				}
 			}
 
-			if (stack.getItem() == SaltItems.MUD_LEGGINGS) {
-				if (player.isInWater() && player.isWet() && rand.nextInt(100) == 0) {
-					stack.damageItem(1, player);
+			if (slot == EquipmentSlotType.LEGS.getIndex() && stack.getItem() == ModItems.MUD_LEGGINGS) {
+				if (living.isInWater() && living.isWet() && rand.nextInt(100) == 0) {
+					stack.damageItem(1, living, le -> le.sendBreakAnimation(EquipmentSlotType.LEGS));
 				}
-
-				if (world.isRaining() && !player.isInWater() && player.isWet() && rand.nextInt(200) == 0) {
-					stack.damageItem(1, player);
+				if (world.isRaining() && !living.isInWater() && living.isWet() && rand.nextInt(200) == 0) {
+					stack.damageItem(1, living, le -> le.sendBreakAnimation(EquipmentSlotType.LEGS));
 				}
-
-				if (stack.getItemDamage() >= stack.getMaxDamage()) {
-					player.setItemStackToSlot(EntityEquipmentSlot.LEGS, ItemStack.EMPTY);
-					if (player instanceof EntityPlayerMP) ModAdvancements.SALT_COMMON.trigger((EntityPlayerMP)player, new ItemStack(SaltItems.MINERAL_MUD));
+				if (stack.getDamage() >= stack.getMaxDamage()) {
+					living.setItemStackToSlot(EquipmentSlotType.LEGS, ItemStack.EMPTY);
+					if (living instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)living, new ItemStack(ModItems.MINERAL_MUD));
 				}
 			}
 
-			if (stack.getItem() == SaltItems.MUD_BOOTS) {
-				if (player.isInWater() && player.isWet() && rand.nextInt(100) == 0) {
-					stack.damageItem(1, player);
+			if (slot == EquipmentSlotType.FEET.getIndex() && stack.getItem() == ModItems.MUD_BOOTS) {
+				if (living.isInWater() && living.isWet() && rand.nextInt(100) == 0) {
+					stack.damageItem(1, living, le -> le.sendBreakAnimation(EquipmentSlotType.FEET));
 				}
-
-				if (!player.isInWater() && world.isRaining() && player.isWet() && rand.nextInt(200) == 0) {
-					stack.damageItem(1, player);
+				if (!living.isInWater() && world.isRaining() && living.isWet() && rand.nextInt(200) == 0) {
+					stack.damageItem(1, living, le -> le.sendBreakAnimation(EquipmentSlotType.FEET));
 				}
-
-				if (stack.getItemDamage() >= stack.getMaxDamage()) {
-					player.setItemStackToSlot(EntityEquipmentSlot.FEET, ItemStack.EMPTY);
-					if (player instanceof EntityPlayerMP) ModAdvancements.SALT_COMMON.trigger((EntityPlayerMP)player, new ItemStack(SaltItems.MINERAL_MUD));
+				if (stack.getDamage() >= stack.getMaxDamage()) {
+					living.setItemStackToSlot(EquipmentSlotType.FEET, ItemStack.EMPTY);
+					if (living instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)living, new ItemStack(ModItems.MINERAL_MUD));
 				}
 			}
 		}

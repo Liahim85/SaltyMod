@@ -1,85 +1,38 @@
 package ru.liahim.saltmod.init;
 
-import static ru.liahim.saltmod.api.block.SaltBlocks.*;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockSlab;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemSlab;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import ru.liahim.saltmod.SaltyMod;
-import ru.liahim.saltmod.block.Extractor;
-import ru.liahim.saltmod.block.MudBlock;
-import ru.liahim.saltmod.block.SaltBlock;
-import ru.liahim.saltmod.block.SaltBrickStair;
-import ru.liahim.saltmod.block.SaltCrystal;
-import ru.liahim.saltmod.block.SaltDirt;
-import ru.liahim.saltmod.block.SaltDirtLite;
-import ru.liahim.saltmod.block.SaltDoubleSlab;
-import ru.liahim.saltmod.block.SaltGrass;
-import ru.liahim.saltmod.block.SaltHalfSlab;
-import ru.liahim.saltmod.block.SaltLake;
-import ru.liahim.saltmod.block.SaltLamp;
-import ru.liahim.saltmod.block.SaltOre;
-import ru.liahim.saltmod.block.SaltPot;
-import ru.liahim.saltmod.block.SaltWort;
-import ru.liahim.saltmod.item.ItemSaltBlock;
-import ru.liahim.saltmod.item.ItemSaltDirt;
+import ru.liahim.saltmod.block.*;
 
 public class ModBlocks {
 
-	public static void registerBlocks() {
-		SaltyMod.logger.info("Start to initialize Blocks");
-		SALT_ORE = registerBlock(new SaltOre(), "salt_ore");
-		SALT_LAKE = registerBlock(new SaltLake(), "salt_lake");
-		SALT_BLOCK = registerBlockWithoutItem(new SaltBlock(), "salt_block");
-		registerItemBlock(new ItemSaltBlock(SALT_BLOCK));
-		SALT_BRICK_STAIRS = registerBlock(new SaltBrickStair(), "salt_brick_stairs");
-		SALT_SLAB = (BlockSlab) registerBlockWithoutItem(new SaltHalfSlab(), "salt_slab");
-		SALT_SLAB_DOUBLE = (BlockSlab) registerBlockWithoutItem(new SaltDoubleSlab(), "salt_slab_double");
-		registerItemBlock(new ItemSlab(SALT_SLAB, SALT_SLAB, SALT_SLAB_DOUBLE));
-		SALT_LAMP = registerBlock(new SaltLamp(), "salt_lamp");
-		SALT_DIRT = registerBlockWithoutItem(new SaltDirt(), "salt_dirt");
-		registerItemBlock(new ItemSaltDirt(SALT_DIRT));
-		SALT_DIRT_LITE = registerBlock(new SaltDirtLite(), "salt_dirt_lite");
-		SALT_GRASS = registerBlock(new SaltGrass(), "salt_grass");
-		MUD_BLOCK = registerBlock(new MudBlock(), "mud_block");
-		EXTRACTOR = registerBlock(new Extractor(false, false), "extractor");
-		EXTRACTOR_LIT = registerBlockWithoutItem(new Extractor(true, false), "extractor_lit", null);
-		EXTRACTOR_STEAM = registerBlockWithoutItem(new Extractor(true, true), "extractor_steam", null);
-		SALT_CRYSTAL = registerBlock(new SaltCrystal(), "salt_crystal");
-		SALTWORT = registerBlockWithoutItem(new SaltWort(), "saltwort", null);
-		SALT_POT = registerBlockWithoutItem(new SaltPot(), "salt_pot", null);
-    	SaltyMod.logger.info("Finished initializing Blocks");
-    }
+	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SaltyMod.MODID);
 
-	private static Block registerBlock(Block block, String registryName) {
-		return registerBlock(block, registryName, SaltyMod.saltTab);
-	}
-
-	private static Block registerBlock(Block block, String registryName, CreativeTabs tab) {
-		ItemBlock itemBlock = new ItemBlock(block);
-		block.setRegistryName(registryName).setUnlocalizedName(registryName).setCreativeTab(tab);
-		itemBlock.setRegistryName(registryName);
-		ForgeRegistries.BLOCKS.register(block);
-		ForgeRegistries.ITEMS.register(itemBlock);
-		SaltyMod.proxy.registerBlockColored(block);
-		return block;
-	}
-
-	private static Block registerBlockWithoutItem(Block block, String registryName) {
-		return registerBlockWithoutItem(block, registryName, SaltyMod.saltTab);
-	}
-
-	private static Block registerBlockWithoutItem(Block block, String registryName, CreativeTabs tab) {
-		block.setRegistryName(registryName).setUnlocalizedName(registryName).setCreativeTab(tab);
-		ForgeRegistries.BLOCKS.register(block);
-		SaltyMod.proxy.registerBlockColored(block);
-		return block;
-	}
-
-	private static void registerItemBlock(ItemBlock itemBlock) {
-		itemBlock.setRegistryName(itemBlock.getBlock().getRegistryName());
-		ForgeRegistries.ITEMS.register(itemBlock);
-	}
+	public static final RegistryObject<Block> SALT_ORE = BLOCKS.register("salt_ore", () -> new SaltSource(true, false));
+	public static final RegistryObject<Block> SALT_LAKE = BLOCKS.register("salt_lake", () -> new SaltSource(true, true));
+	public static final RegistryObject<Block> SALT_BLOCK = BLOCKS.register("salt_block", () -> new SaltBlock());
+	public static final RegistryObject<Block> SALT_BLOCK_CHISELED = BLOCKS.register("salt_block_chiseled", () -> new SaltBlock());
+	public static final RegistryObject<Block> SALT_BLOCK_PILLAR = BLOCKS.register("salt_block_pillar", () -> new SaltPillar());
+	public static final RegistryObject<Block> SALT_BRICK = BLOCKS.register("salt_brick", () -> new SaltBlock());
+	public static final RegistryObject<Block> SALT_BLOCK_CRACKED = BLOCKS.register("salt_block_cracked", () -> new SaltBlock());
+	public static final RegistryObject<Block> SALT_BRICK_CRACKED = BLOCKS.register("salt_brick_cracked", () -> new SaltBlock());
+	public static final RegistryObject<Block> SALT_BRICK_CHISELED = BLOCKS.register("salt_brick_chiseled", () -> new SaltBlock());
+	public static final RegistryObject<Block> SALT_CHAPITER = BLOCKS.register("salt_chapiter", () -> new SaltBlock());
+	public static final RegistryObject<Block> SALT_BRICK_STAIRS = BLOCKS.register("salt_brick_stairs", () -> new SaltBrickStair(SALT_BRICK.get().getDefaultState()));
+	public static final RegistryObject<Block> SALT_SLAB_BLOCK = BLOCKS.register("salt_slab_block", () -> new SaltSlab());
+	public static final RegistryObject<Block> SALT_SLAB_BRICK = BLOCKS.register("salt_slab_brick", () -> new SaltSlab());
+	public static final RegistryObject<Block> SALT_SLAB_PILLAR = BLOCKS.register("salt_slab_pillar", () -> new SaltSlab());
+	public static final RegistryObject<Block> SALT_LAMP = BLOCKS.register("salt_lamp", () -> new SaltLamp());
+	public static final RegistryObject<Block> SALT_DIRT_LAKE = BLOCKS.register("salt_dirt_lake", () -> new SaltSource(false, true));
+	public static final RegistryObject<Block> SALT_DIRT = BLOCKS.register("salt_dirt", () -> new SaltDirt());
+	public static final RegistryObject<Block> SALT_DIRT_LITE = BLOCKS.register("salt_dirt_lite", () -> new SaltDirtLite());
+	public static final RegistryObject<Block> SALT_GRASS = BLOCKS.register("salt_grass", () -> new SaltGrass());
+	public static final RegistryObject<Block> MUD_BLOCK = BLOCKS.register("mud_block", () -> new MudBlock());
+	public static final RegistryObject<Block> EVAPORATOR = BLOCKS.register("evaporator", () -> new Evaporator());
+	public static final RegistryObject<Block> SALT_CRYSTAL = BLOCKS.register("salt_crystal", () -> new SaltCrystal());
+	public static final RegistryObject<Block> SALTWORT = BLOCKS.register("saltwort", () -> new SaltWort());
+	public static final RegistryObject<Block> POTTED_SALTWORT = BLOCKS.register("potted_saltwort", () -> new SaltPot());
 }

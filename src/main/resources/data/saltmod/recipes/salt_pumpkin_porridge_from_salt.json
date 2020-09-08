@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_pumpkin_porridge",
+    "ingredients": [
+        {
+            "item": "minecraft:pumpkin"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_pumpkin_porridge"
+    }
+}

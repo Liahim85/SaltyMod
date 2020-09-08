@@ -1,0 +1,24 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_salmon_soup",
+    "ingredients": [
+        {
+            "tag": "forge:fishes/salmon"
+        },
+        {
+            "tag": "forge:crops/carrot"
+        },
+        {
+            "tag": "forge:crops/potato"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_salmon_soup"
+    }
+}

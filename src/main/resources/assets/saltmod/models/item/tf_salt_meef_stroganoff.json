@@ -1,6 +1,6 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"saltmod:items/tf_salt_meef_stroganoff"
+        "layer0":"saltmod:item/tf_salt_meef_stroganoff"
     }
 }

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "saltmod:salt_block",
+    "saltmod:salt_block_chiseled",
+    "saltmod:salt_block_pillar",
+    "saltmod:salt_brick",
+    "saltmod:salt_block_cracked",
+    "saltmod:salt_brick_cracked",
+    "saltmod:salt_brick_chiseled",
+    "saltmod:salt_chapiter"
+  ]
+}

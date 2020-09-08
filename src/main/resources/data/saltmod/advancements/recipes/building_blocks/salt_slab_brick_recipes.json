@@ -1,0 +1,40 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_pinch_from_slab",
+            "saltmod:salt_brick_chiseled"
+        ]
+    },
+    "criteria": {
+        "has_salt_slab": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+            		{
+                		"item": "saltmod:salt_slab_brick"
+                	}
+                ]
+            }
+        },
+        "has_the_pinch_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_pinch_from_slab"
+            }
+        },
+        "has_the_block_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_brick_chiseled"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_salt_slab",
+            "has_the_pinch_recipe",
+            "has_the_block_recipe"
+        ]
+    ]
+}

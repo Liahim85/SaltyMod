@@ -1,0 +1,15 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_cooked_mutton",
+    "ingredients": [
+        {
+            "item": "minecraft:cooked_mutton"
+        },
+        {
+            "tag": "saltmod:salt"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_cooked_mutton"
+    }
+}

@@ -1,0 +1,30 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "hufc",
+    "ingredients": [
+        {
+            "tag": "forge:crops/beetroot"
+        },
+        {
+            "tag": "forge:crops/potato"
+        },
+        {
+            "tag": "forge:crops/carrot"
+        },
+        {
+            "tag": "forge:fishes/cod"
+        },
+        {
+            "tag": "forge:eggs"
+        },
+        {
+            "tag": "forge:flowers/allium"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:hufc"
+    }
+}

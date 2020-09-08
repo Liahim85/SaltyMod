@@ -1,6 +1,6 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"saltmod:items/bop_pickled_turnip"
+        "layer0":"saltmod:item/bop_pickled_turnip"
     }
 }

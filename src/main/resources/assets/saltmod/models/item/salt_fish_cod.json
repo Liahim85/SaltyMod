@@ -1,6 +1,0 @@
-{
-    "parent":"item/generated",
-    "textures": {
-        "layer0":"saltmod:items/salt_fish_cod"
-    }
-}

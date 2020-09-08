@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt",
+    "ingredients": [
+        [
+            {
+                "tag": "forge:storage_blocks/salt"
+            },
+            {
+                "tag": "forge:stairs/salt"
+            },
+            {
+                "item": "saltmod:salt_lamp"
+            }
+        ]
+    ],
+    "result": {
+        "item": "saltmod:salt",
+        "count": 9
+    }
+}

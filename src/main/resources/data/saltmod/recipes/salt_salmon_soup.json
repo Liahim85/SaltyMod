@@ -1,0 +1,15 @@
+{ 
+    "type": "saltmod:non_remaining_shapeless",
+    "group": "salt_salmon_soup",
+    "ingredients": [
+        {
+            "item": "saltmod:salmon_soup"
+        },
+        {
+            "tag": "saltmod:salt"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_salmon_soup"
+    }
+}

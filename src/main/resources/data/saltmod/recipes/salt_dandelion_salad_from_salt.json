@@ -1,0 +1,24 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_dandelion_salad",
+    "ingredients": [
+        {
+            "tag": "forge:seeds/wheat"
+        },
+        {
+            "tag": "forge:flowers/dandelion"
+        },
+        {
+            "tag": "forge:flowers/allium"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_dandelion_salad"
+    }
+}

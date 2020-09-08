@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "saltmod:salt_lake"
+  },
+  "result": "saltmod:salt",
+  "experience": 0.7,
+  "cookingtime": 200
+}

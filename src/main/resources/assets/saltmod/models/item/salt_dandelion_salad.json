@@ -1,6 +1,7 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"saltmod:items/salt_dandelion_salad"
+        "layer0":"saltmod:item/dandelion_salad",
+        "layer1":"saltmod:item/salt_0"
     }
 }

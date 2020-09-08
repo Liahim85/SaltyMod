@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "mineral_mud",
+    "ingredients": [
+        {
+            "tag": "forge:dusts/salt"
+        },
+        {
+            "tag": "forge:dusts/soda"
+        },
+        {
+            "item": "minecraft:clay_ball"
+        },
+        {
+            "tag": "forge:coal"
+        }
+    ],
+    "result": {
+        "item": "saltmod:mineral_mud"
+    }
+}

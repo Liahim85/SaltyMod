@@ -1,0 +1,17 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "water_bottle",
+    "ingredients": [
+        {
+            "item": "minecraft:glass_bottle"
+        },
+        {
+            "item": "minecraft:snowball"
+        }
+    ],
+    "result": {
+    	"type": "forge:nbt",
+        "item": "minecraft:potion",
+        "nbt": "{Potion:'minecraft:water'}"
+    }
+}

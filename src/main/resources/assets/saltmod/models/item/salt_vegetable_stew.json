@@ -1,6 +1,7 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"saltmod:items/salt_vegetable_stew"
+        "layer0":"saltmod:item/vegetable_stew",
+        "layer1":"saltmod:item/salt_0"
     }
 }

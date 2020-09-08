@@ -1,0 +1,36 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "rainmaker",
+    "ingredients": [
+        {
+            "item": "saltmod:salt_star"
+        },
+        {
+            "item": "saltmod:salt_star"
+        },
+        {
+            "item": "saltmod:salt_star"
+        },
+        {
+            "item": "saltmod:salt_star"
+        },
+        {
+            "item": "minecraft:paper"
+        },
+        {
+            "item": "saltmod:salt_star"
+        },
+        {
+            "tag": "forge:gunpowder"
+        },
+        {
+            "tag": "forge:gunpowder"
+        },
+        {
+            "tag": "forge:gunpowder"
+        }
+    ],
+    "result": {
+        "item": "saltmod:rainmaker"
+    }
+}

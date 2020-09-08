@@ -1,13 +1,13 @@
 {  
     "parent": "saltmod:block/grass",
     "textures": {
-        "particle": "saltmod:blocks/salt_grass",
-        "down": "saltmod:blocks/salt_dirt_lite_0",
-        "up": "blocks/grass_top",
-        "north": "saltmod:blocks/salt_grass",
-        "east": "saltmod:blocks/salt_grass",
-        "south": "saltmod:blocks/salt_grass",
-        "west": "saltmod:blocks/salt_grass",
-        "overlay": "blocks/grass_side_overlay"
+        "particle": "saltmod:block/salt_grass",
+        "down": "saltmod:block/salt_dirt_lite_0",
+        "up": "block/grass_block_top",
+        "north": "saltmod:block/salt_grass",
+        "east": "saltmod:block/salt_grass",
+        "south": "saltmod:block/salt_grass",
+        "west": "saltmod:block/salt_grass",
+        "overlay": "block/grass_block_side_overlay"
     }
 }

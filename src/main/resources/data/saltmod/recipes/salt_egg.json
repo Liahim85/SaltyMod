@@ -1,0 +1,15 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_egg",
+    "ingredients": [
+        {
+            "item": "minecraft:egg"
+        },
+        {
+            "tag": "saltmod:salt"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_egg"
+    }
+}

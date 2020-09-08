@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "saltmod:blocks/salt_block_cracked"
+        "all": "saltmod:block/salt_block_cracked"
     }
 }

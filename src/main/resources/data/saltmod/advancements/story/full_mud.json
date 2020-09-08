@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:achiev_item",
+            "nbt": "{SaltAchievType:1}"
+        },
+        "title": {
+            "translate": "advancements.saltmod.full_mud"
+        },
+        "description": {
+            "translate": "advancements.saltmod.full_mud.desc"
+        }
+    },
+    "parent": "saltmod:story/mineral_mud",
+    "criteria": {
+        "full_mud": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:mud_helmet"
+            }
+        }
+    }
+}

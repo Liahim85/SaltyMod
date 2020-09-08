@@ -1,0 +1,128 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:salt_cooked_beef",
+            "saltmod:salt_cooked_porkchop",
+            "saltmod:salt_cooked_mutton",
+            "saltmod:salt_cooked_chicken",
+            "saltmod:salt_cooked_rabbit",
+            "saltmod:salt_baked_potato",
+            "saltmod:salt_cod",
+            "saltmod:salt_cooked_cod",
+            "saltmod:salt_salmon",
+            "saltmod:salt_cooked_salmon",
+            "saltmod:salt_tropical_fish",
+            "saltmod:salt_bread",
+            "saltmod:corned_beef"
+        ]
+    },
+    "criteria": {
+        "has_salt_pinch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+            		{
+                		"item": "saltmod:salt_pinch"
+                	}
+                ]
+            }
+        },
+        "has_the_beef_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_cooked_beef"
+            }
+        },
+        "has_the_porkchop_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_cooked_porkchop"
+            }
+        },
+        "has_the_mutton_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_cooked_mutton"
+            }
+        },
+        "has_the_chicken_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_cooked_chicken"
+            }
+        },
+        "has_the_rabbit_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_cooked_rabbit"
+            }
+        },
+        "has_the_potato_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_baked_potato"
+            }
+        },
+        "has_the_cod_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_cod"
+            }
+        },
+        "has_the_cooked_cod_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_cooked_cod"
+            }
+        },
+        "has_the_salmon_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_salmon"
+            }
+        },
+        "has_the_cooked_salmon_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_cooked_salmon"
+            }
+        },
+        "has_the_tropical_fish_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_tropical_fish"
+            }
+        },
+        "has_the_bread_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:salt_bread"
+            }
+        },
+        "has_the_corned_beef_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:corned_beef"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_salt_pinch",
+            "has_the_beef_recipe",
+            "has_the_porkchop_recipe",
+            "has_the_mutton_recipe",
+            "has_the_chicken_recipe",
+            "has_the_rabbit_recipe",
+            "has_the_potato_recipe",
+            "has_the_cod_recipe",
+            "has_the_cooked_cod_recipe",
+            "has_the_salmon_recipe",
+            "has_the_cooked_salmon_recipe",
+            "has_the_tropical_fish_recipe",
+            "has_the_bread_recipe",
+            "has_the_corned_beef_recipe"
+        ]
+    ]
+}

@@ -3,76 +3,65 @@ package ru.liahim.saltmod.block;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockStateContainer;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Blocks;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
+import net.minecraft.state.EnumProperty;
+import net.minecraft.state.StateContainer;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
-import ru.liahim.saltmod.api.block.SaltBlocks;
-import ru.liahim.saltmod.api.item.SaltItems;
+import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.common.ToolType;
 import ru.liahim.saltmod.init.ModAdvancements;
+import ru.liahim.saltmod.init.ModBlocks;
+import ru.liahim.saltmod.init.ModItems;
 
-public class SaltDirtLite extends Block {
+public class SaltDirtLite extends Block implements ISaltDirt {
 
-	public static final PropertyEnum VARIANT = PropertyEnum.create("variant", SaltDirtLite.EnumType.class);
+	public static final EnumProperty<EnumType> VARIANT = EnumProperty.create("variant", EnumType.class);
+
+	public SaltDirtLite(Properties properties) {
+		super(properties);
+	}
 
 	public SaltDirtLite() {
-		super(Material.GROUND);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, SaltDirtLite.EnumType.EMPTY));
-		this.setTickRandomly(true);
-		this.setSoundType(SoundType.GROUND);
-		this.setHardness(0.5F);
-		this.setResistance(1F);
-		this.setHarvestLevel("shovel", 0);
+		this(Properties.create(Material.EARTH)
+				.sound(SoundType.GROUND)
+				.hardnessAndResistance(0.5F, 1F)
+				.harvestTool(ToolType.SHOVEL)
+				.harvestLevel(0)
+				.tickRandomly());
 	}
 
 	@Override
-	public IBlockState getStateFromMeta(int meta) {
-		return this.getDefaultState().withProperty(VARIANT, SaltDirtLite.EnumType.byMetadata(meta));
+	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+		builder.add(VARIANT);
 	}
 
 	@Override
-	public int getMetaFromState(IBlockState state) {
-		return ((SaltDirtLite.EnumType) state.getValue(VARIANT)).getMetadata();
-	}
-
-	@Override
-	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[] { VARIANT });
-	}
-
-	@Override
-	public void updateTick(World world, BlockPos pos, IBlockState state, Random rand) {
-		if (!world.isRemote) {
-			if (world.getBlockState(pos.up()).getMaterial() == Material.SNOW) {
-				world.setBlockToAir(pos.up());
-			} else if (!world.getBlockState(pos.up()).isFullCube() && world.getLight(pos.up()) > 7) {
-				int j = world.getBlockState(pos).getBlock().getMetaFromState(state);
-				if (j > 2) {
-					int x = pos.getX();
-					int y = pos.getY();
-					int z = pos.getZ();
-
-					for (int x1 = x - 1; x1 < x + 2; x1++) {
-						for (int z1 = z - 1; z1 < z + 2; z1++) {
-
-							BlockPos pos2 = new BlockPos(x1, y, z1);
-
-							if ((world.getBlockState(pos2).getBlock() == Blocks.GRASS || world.getBlockState(pos2) == SaltBlocks.SALT_GRASS)
-									&& world.getBlockState(pos).getBlock() == this
-									&& world.getLightFromNeighbors(pos.up()) > 7 && rand.nextInt(5) == 0) {
-								world.setBlockState(pos, SaltBlocks.SALT_GRASS.getDefaultState().withProperty(SaltGrass.VARIANT, SaltGrass.EnumType.byMetadata(j)), 3);
-							}
+	public void tick(BlockState state, ServerWorld world, BlockPos pos, Random rand) {
+		BlockPos posUp = pos.up();
+		if (world.getBlockState(posUp).getMaterial() == Material.SNOW) {
+			world.setBlockState(posUp, Blocks.AIR.getDefaultState());
+		} else if (rand.nextInt(5) == 0 && world.getLight(posUp) > 7) {
+			int j = state.get(VARIANT).getMetadata();
+			if (j > 2) {
+				for (int x = -1; x <= 1; x++) {
+					for (int z = -1; z <= 1; z++) {
+						BlockPos pos2 = pos.add(x, 0, z);
+						if ((world.getBlockState(pos2).getBlock() == Blocks.GRASS || world.getBlockState(pos2).getBlock() == ModBlocks.SALT_GRASS.get())
+								&& !world.getBlockState(pos2.up()).isSolidSide(world, pos2.up(), Direction.DOWN)) {
+							world.setBlockState(pos, ModBlocks.SALT_GRASS.get().getDefaultState().with(VARIANT, SaltGrass.EnumType.byMetadata(j)));
+							return;
 						}
 					}
 				}
@@ -81,87 +70,102 @@ public class SaltDirtLite extends Block {
 	}
 
 	@Override
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
+	public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
 		ItemStack heldItem = player.inventory.getCurrentItem();
-		if (!heldItem.isEmpty() && heldItem.getItem() == SaltItems.SALT_PINCH) {
-			if (player instanceof EntityPlayerMP && world.getBlockState(pos.up()).getBlock() == SaltBlocks.SALTWORT) {
-				ModAdvancements.SALT_COMMON.trigger((EntityPlayerMP)player, new ItemStack(SaltItems.SALTWORT_SEED));
+		if (this.canIncrease(state) && !heldItem.isEmpty() && heldItem.getItem() == ModItems.SALT_PINCH) {
+			if (player instanceof ServerPlayerEntity && world.getBlockState(pos.up()).getBlock() == ModBlocks.SALTWORT.get()) {
+				ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.SALTWORT_SEED));
 			}
-			int meta = world.getBlockState(pos).getBlock().getMetaFromState(state);
-			if (meta == 0 || meta > 2) {
-				world.setBlockState(pos, this.getStateFromMeta(1), 3);
-				if (!player.isCreative()) heldItem.setCount(heldItem.getCount() - 1);
-			} else if (meta == 1) {
-				world.setBlockState(pos, this.getStateFromMeta(2), 3);
-				if (!player.isCreative()) heldItem.setCount(heldItem.getCount() - 1);
-			} else if (meta == 2) {
-				world.setBlockState(pos, SaltBlocks.SALT_DIRT.getDefaultState(), 3);
-				if (!player.isCreative()) heldItem.setCount(heldItem.getCount() - 1);
-			}
-			return true;
+			if (!world.isRemote && this.increaseSalt(state, (ServerWorld) world, pos) && !player.abilities.isCreativeMode) heldItem.shrink(1);
+			return ActionResultType.SUCCESS;
 		}
-
-		if (player.isCreative()) {
-			if (!heldItem.isEmpty() && heldItem.getItem() == SaltItems.SALT) {
-				int i = state.getBlock().getMetaFromState(state);
-				if (side.getIndex() <= 1) {
-					if (i == 0) i = 3;
-					else if (i < 3 || i > 5) i = 0;
-					else i += 1;}
-				if (side == EnumFacing.NORTH) {
-					if (i == 4) i = 11;
-					else if (i == 5) i = 14;
-					else if (i < 7) i = 7;
-					else if (i == 7) i = 0;
-					else if (i == 8) i = 11;
-					else if (i == 9) i = 15;
-					else if (i == 10) i = 14;
-					else if (i == 11) i = 8;
-					else if (i == 14) i = 10;
-					else if (i < 15) i = 15;
-					else i = 9;}
-				if (side == EnumFacing.EAST) {
-					if (i == 5) i = 12;
-					else if (i == 6) i = 11;
-					else if (i < 7) i = 8;
-					else if (i == 7) i = 11;
-					else if (i == 8) i = 0;
-					else if (i == 9) i = 12;
-					else if (i == 10) i = 15;
-					else if (i == 11) i = 7;
-					else if (i == 12) i = 9;
-					else if (i < 15) i = 15;
-					else i = 10;}
-				if (side == EnumFacing.SOUTH) {
-					if (i == 3) i = 12;
-					else if (i == 6) i = 13;
-					else if (i < 7) i = 9;
-					else if (i == 7) i = 15;
-					else if (i == 8) i = 12;
-					else if (i == 9) i = 0;
-					else if (i == 10) i = 13;
-					else if (i == 12) i = 8;
-					else if (i == 13) i = 10;
-					else if (i < 15) i = 15;
-					else i = 7;}
-				if (side == EnumFacing.WEST) {
-					if (i == 3) i = 14;
-					else if (i == 4) i = 13;
-					else if (i < 7) i = 10;
-					else if (i == 7) i = 14;
-					else if (i == 8) i = 15;
-					else if (i == 9) i = 13;
-					else if (i == 10) i = 0;
-					else if (i == 13) i = 9;
-					else if (i == 14) i = 7;
-					else if (i < 15) i = 15;
-					else i = 8;}
-				world.setBlockState(pos, this.getStateFromMeta(i), 3);
-				return true;
-			}
+		if (player.isCreative() && !heldItem.isEmpty() && heldItem.getItem() == ModItems.SALT) {
+			int i = state.get(VARIANT).getMetadata();
+			if (hit.getFace().getIndex() <= 1) {
+				if (i == 0) i = 3;
+				else if (i < 3 || i > 5) i = 0;
+				else i += 1;}
+			if (hit.getFace() == Direction.NORTH) {
+				if (i == 4) i = 11;
+				else if (i == 5) i = 14;
+				else if (i < 7) i = 7;
+				else if (i == 7) i = 0;
+				else if (i == 8) i = 11;
+				else if (i == 9) i = 15;
+				else if (i == 10) i = 14;
+				else if (i == 11) i = 8;
+				else if (i == 14) i = 10;
+				else if (i < 15) i = 15;
+				else i = 9;}
+			if (hit.getFace() == Direction.EAST) {
+				if (i == 5) i = 12;
+				else if (i == 6) i = 11;
+				else if (i < 7) i = 8;
+				else if (i == 7) i = 11;
+				else if (i == 8) i = 0;
+				else if (i == 9) i = 12;
+				else if (i == 10) i = 15;
+				else if (i == 11) i = 7;
+				else if (i == 12) i = 9;
+				else if (i < 15) i = 15;
+				else i = 10;}
+			if (hit.getFace() == Direction.SOUTH) {
+				if (i == 3) i = 12;
+				else if (i == 6) i = 13;
+				else if (i < 7) i = 9;
+				else if (i == 7) i = 15;
+				else if (i == 8) i = 12;
+				else if (i == 9) i = 0;
+				else if (i == 10) i = 13;
+				else if (i == 12) i = 8;
+				else if (i == 13) i = 10;
+				else if (i < 15) i = 15;
+				else i = 7;}
+			if (hit.getFace() == Direction.WEST) {
+				if (i == 3) i = 14;
+				else if (i == 4) i = 13;
+				else if (i < 7) i = 10;
+				else if (i == 7) i = 14;
+				else if (i == 8) i = 15;
+				else if (i == 9) i = 13;
+				else if (i == 10) i = 0;
+				else if (i == 13) i = 9;
+				else if (i == 14) i = 7;
+				else if (i < 15) i = 15;
+				else i = 8;}
+			world.setBlockState(pos, this.getDefaultState().with(VARIANT, EnumType.byMetadata(i)));
+			return ActionResultType.SUCCESS;
 		}
-        return false;
+        return ActionResultType.PASS;
     }
+
+	@Override
+	public boolean canIncrease(BlockState state) {
+		return true;
+	}
+
+	@Override
+	public boolean canReduce(BlockState state) {
+		int i = state.get(VARIANT).getMetadata();
+		return i == 1 || i == 2;
+	}
+
+	@Override
+	public boolean increaseSalt(BlockState state, ServerWorld world, BlockPos pos) {
+		int i = state.get(VARIANT).getMetadata();
+		if (i == 0 || i > 2) return world.setBlockState(pos, this.getDefaultState().with(VARIANT, EnumType.MEDIUM));
+		else if (i == 1) return world.setBlockState(pos, this.getDefaultState().with(VARIANT, EnumType.FULL));
+		else if (i == 2) return world.setBlockState(pos, ModBlocks.SALT_DIRT.get().getDefaultState());
+		return false;
+	}
+
+	@Override
+	public boolean ruduceSalt(BlockState state, ServerWorld world, BlockPos pos) {
+		int i = state.get(VARIANT).getMetadata();
+		if (i == 2) return world.setBlockState(pos, this.getDefaultState().with(VARIANT, EnumType.MEDIUM));
+		else if (i == 1) return world.setBlockState(pos, this.getDefaultState().with(VARIANT, EnumType.EMPTY));
+		return false;
+	}
 
 	public enum EnumType implements IStringSerializable {
 

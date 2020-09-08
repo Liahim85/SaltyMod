@@ -1,0 +1,15 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_cooked_rabbit",
+    "ingredients": [
+        {
+            "item": "minecraft:cooked_rabbit"
+        },
+        {
+            "tag": "saltmod:salt"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_cooked_rabbit"
+    }
+}

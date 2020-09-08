@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "saltmod:salt_block"
+  },
+  "result": "saltmod:salt_block_cracked",
+  "experience": 0,
+  "cookingtime": 100
+}

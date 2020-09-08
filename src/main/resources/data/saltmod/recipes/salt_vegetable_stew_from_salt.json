@@ -1,0 +1,24 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_vegetable_stew",
+    "ingredients": [
+        {
+            "tag": "forge:crops/carrot"
+        },
+        {
+            "tag": "forge:crops/potato"
+        },
+        {
+            "tag": "forge:mushrooms"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_vegetable_stew"
+    }
+}

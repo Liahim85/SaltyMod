@@ -1,0 +1,11 @@
+{
+    "parent":"item/generated",
+    "textures": {
+        "layer0":"saltmod:item/achiev_icon_0"
+    },
+    "overrides": [
+        { "predicate": { "type": 0 }, "model": "saltmod:item/achiev_item" },
+        { "predicate": { "type": 1 }, "model": "saltmod:item/achiev_item_01" },
+        { "predicate": { "type": 2 }, "model": "saltmod:item/achiev_item_02" }
+    ]
+}

@@ -1,0 +1,15 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_baked_potato",
+    "ingredients": [
+        {
+            "item": "minecraft:baked_potato"
+        },
+        {
+            "tag": "saltmod:salt"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_baked_potato"
+    }
+}

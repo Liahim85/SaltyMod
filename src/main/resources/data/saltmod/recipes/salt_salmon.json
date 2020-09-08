@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_salmon",
+    "ingredients": [
+        {
+            "item": "minecraft:salmon"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "tag": "saltmod:salt"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_salmon"
+    }
+}

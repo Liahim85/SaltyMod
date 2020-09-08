@@ -1,0 +1,33 @@
+{
+    "parent": "saltmod:recipes/root",
+    "rewards": {
+        "recipes": [
+            "saltmod:mud_block"
+        ]
+    },
+    "criteria": {
+        "has_mineral_mud": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:mineral_mud",
+                        "count": 4
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "saltmod:mud_block"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_mineral_mud",
+            "has_the_recipe"
+        ]
+    ]
+}

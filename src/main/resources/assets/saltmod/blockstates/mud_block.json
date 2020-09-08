@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "saltmod:mud_block" }
+        "": { "model": "saltmod:block/mud_block" }
     }
 }

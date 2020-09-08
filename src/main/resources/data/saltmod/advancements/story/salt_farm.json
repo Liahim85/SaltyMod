@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:salt_pinch"
+        },
+        "title": {
+            "translate": "advancements.saltmod.salt_farm"
+        },
+        "description": {
+            "translate": "advancements.saltmod.salt_farm.desc"
+        }
+    },
+    "parent": "saltmod:story/salt",
+    "criteria": {
+        "salt_farm": {
+            "trigger": "saltmod:salt_common",
+            "conditions": {
+                "item": "saltmod:salt_pinch"
+            }
+        }
+    }
+}

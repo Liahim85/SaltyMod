@@ -1,0 +1,23 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "pickled_mushroom",
+    "ingredients": [
+        {
+            "tag": "forge:mushrooms"
+        },
+        {
+            "tag": "forge:mushrooms"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "type": "forge:nbt",
+        	"item": "minecraft:potion",
+        	"nbt": "{Potion:'minecraft:water'}"
+        }
+    ],
+    "result": {
+        "item": "saltmod:pickled_mushroom"
+    }
+}

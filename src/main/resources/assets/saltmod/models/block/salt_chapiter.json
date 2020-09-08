@@ -1,8 +1,8 @@
 {
     "parent": "block/cube_bottom_top",
     "textures": {
-        "top": "saltmod:blocks/salt_chapiter_top",
-        "bottom": "saltmod:blocks/salt_block_lines_top",       
-        "side": "saltmod:blocks/salt_chapiter"
+        "top": "saltmod:block/salt_chapiter_top",
+        "bottom": "saltmod:block/salt_block_lines_top",       
+        "side": "saltmod:block/salt_chapiter"
     }
 }

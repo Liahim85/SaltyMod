@@ -1,0 +1,33 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_wheat_sprouts",
+    "ingredients": [
+        {
+            "tag": "forge:seeds/wheat"
+        },
+        {
+            "tag": "forge:seeds/wheat"
+        },
+        {
+            "tag": "forge:seeds/wheat"
+        },
+        {
+            "tag": "forge:seeds/wheat"
+        },
+        {
+            "tag": "forge:seeds/wheat"
+        },
+        {
+            "tag": "forge:seeds/wheat"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_wheat_sprouts"
+    }
+}

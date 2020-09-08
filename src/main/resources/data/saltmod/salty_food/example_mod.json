@@ -1,0 +1,30 @@
+{
+	"prefix": "em",						# The prefix to be added to the registry name. For example: "saltymod:salt_em_some_item" (default: empty)
+	"values": [
+		"item_food_1",					# Salting food with standard parameters
+		"item_food_2",					# Salting food with standard parameters
+		"item_food_3",					# Salting food with standard parameters
+		{
+	    	"item": "item_food_4",		# Salting food with custom parameters (model & recipe will be added, localized name will be "Salty Item Food")
+		    "salt": 3,					# Salt count for recipe (default: 1)
+		    "texture": 2				# Texture type (can be 0, 1 or 2, default: 0)
+	    },
+		{
+	    	"item": "item_food_5",		# Salting food with custom name, model & recipe
+		    "prefix": "em1",			# Sets a custom prefix to the registry name
+		    "name": false,				# Disables localized name (The name will be taken from the lang-file)
+		    "model": false,				# Disables standard model (Recommended: The model will be taken from the assets/saltmod:models/item/salt_em1_item_food_5.json)
+		    "recipe": false				# Disables standard recipe (The recipe will be taken from the default recipes folder)
+	    },
+		{
+	    	"item": "item_non_food",	# Salting non food item
+		    "food": {					# Custom food parameters
+		    	"heal": 5,				# Health count (default: 1)
+		    	"saturation": 0.5,		# Saturation (default: 0.6)
+		    	"meat": true,			# Sets as meat (default: false)
+		    	"always": true,			# Sets always edible (default: false)
+		    	"fast": true			# Sets fast eaten (default: false)
+		    }
+	    }
+	]
+}

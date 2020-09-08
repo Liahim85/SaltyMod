@@ -1,0 +1,23 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "pickled_fern",
+    "ingredients": [
+        {
+            "item": "minecraft:fern"
+        },
+        {
+            "item": "minecraft:fern"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "type": "forge:nbt",
+        	"item": "minecraft:potion",
+        	"nbt": "{Potion:'minecraft:water'}"
+        }
+    ],
+    "result": {
+        "item": "saltmod:pickled_fern"
+    }
+}

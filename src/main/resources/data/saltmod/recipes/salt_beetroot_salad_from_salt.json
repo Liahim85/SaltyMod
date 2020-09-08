@@ -1,0 +1,24 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_beetroot_salad",
+    "ingredients": [
+        {
+            "tag": "forge:crops/beetroot"
+        },
+        {
+            "tag": "forge:crops/potato"
+        },
+        {
+            "tag": "forge:crops/carrot"
+        },
+        {
+            "tag": "saltmod:salt"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_beetroot_salad"
+    }
+}

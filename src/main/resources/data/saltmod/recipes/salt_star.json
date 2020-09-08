@@ -1,0 +1,36 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_star",
+    "ingredients": [
+        {
+            "tag": "forge:dusts/soda"
+        },
+        {
+            "tag": "forge:dusts/salt"
+        },
+        {
+            "tag": "forge:dusts/soda"
+        },
+        {
+            "tag": "forge:dusts/salt"
+        },
+        {
+            "tag": "forge:gunpowder"
+        },
+        {
+            "tag": "forge:dusts/salt"
+        },
+        {
+            "tag": "forge:dusts/soda"
+        },
+        {
+            "tag": "forge:dusts/salt"
+        },
+        {
+            "tag": "forge:dusts/soda"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_star"
+    }
+}

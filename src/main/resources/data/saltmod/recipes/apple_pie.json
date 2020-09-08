@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "apple_pie",
+    "ingredients": [
+        {
+            "tag": "forge:fruits/apple"
+        },
+        {
+            "tag": "forge:fruits/apple"
+        },
+        {
+            "tag": "forge:sugar"
+        },
+        {
+            "tag": "forge:eggs"
+        }
+    ],
+    "result": {
+        "item": "saltmod:apple_pie"
+    }
+}

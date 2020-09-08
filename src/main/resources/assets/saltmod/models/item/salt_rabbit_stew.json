@@ -1,6 +1,7 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"saltmod:items/salt_rabbit_stew"
+        "layer0":"item/rabbit_stew",
+        "layer1":"saltmod:item/salt_0"
     }
 }

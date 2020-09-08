@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "saltmod:salt_slab_block",
+    "saltmod:salt_slab_brick",
+    "saltmod:salt_slab_pillar"
+  ]
+}

@@ -1,7 +1,7 @@
 {
     "variants": {
-        "stage=sise_b": { "model": "saltmod:salt_crystal" },
-        "stage=sise_m": { "model": "saltmod:salt_crystal_m" },
-        "stage=sise_s": { "model": "saltmod:salt_crystal_s" }
+        "age=0": { "model": "saltmod:block/salt_crystal" },
+        "age=1": { "model": "saltmod:block/salt_crystal_m" },
+        "age=2": { "model": "saltmod:block/salt_crystal_s" }
     }
 }

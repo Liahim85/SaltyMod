@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:dusts/salt",
+    "#forge:dusts/soda",
+    "#forge:dusts/powdered_milk"
+  ]
+}

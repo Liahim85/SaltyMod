@@ -1,6 +1,6 @@
 {
     "parent": "block/cross",
     "textures": {
-        "cross": "saltmod:blocks/saltwort"
+        "cross": "saltmod:block/saltwort"
     }
 }

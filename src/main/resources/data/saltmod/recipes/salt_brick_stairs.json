@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "salt_brick_stairs",
+    "pattern": [
+        "  X",
+        " XX",
+        "XXX"
+    ],
+    "key": {
+        "X": {
+            "item": "saltmod:salt_brick"
+        }
+    },
+    "result": {
+        "item": "saltmod:salt_brick_stairs",
+        "count": 6
+    }
+}

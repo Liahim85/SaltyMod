@@ -1,10 +1,10 @@
 {
     "variants": {
-        "stage=stage_0": { "model": "saltmod:saltwort" },
-        "stage=stage_1": { "model": "saltmod:saltwort_1" },
-        "stage=stage_2": { "model": "saltmod:saltwort_2" },
-        "stage=stage_3": { "model": "saltmod:saltwort_3" },
-        "stage=stage_4": { "model": "saltmod:saltwort_4" },
-        "stage=dead": { "model": "saltmod:saltwort_d" }
+        "age=0": { "model": "saltmod:block/saltwort" },
+        "age=1": { "model": "saltmod:block/saltwort_1" },
+        "age=2": { "model": "saltmod:block/saltwort_2" },
+        "age=3": { "model": "saltmod:block/saltwort_3" },
+        "age=4": { "model": "saltmod:block/saltwort_4" },
+        "age=5": { "model": "saltmod:block/saltwort_d" }
     }
 }

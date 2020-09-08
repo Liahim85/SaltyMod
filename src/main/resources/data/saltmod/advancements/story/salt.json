@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "saltmod:salt"
+        },
+        "title": {
+            "translate": "advancements.saltmod.salt"
+        },
+        "description": {
+            "translate": "advancements.saltmod.salt.desc"
+        }
+    },
+    "parent": "saltmod:story/root",
+    "criteria": {
+        "salt": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "saltmod:salt"
+                    }
+                ]
+            }
+        }
+    }
+}

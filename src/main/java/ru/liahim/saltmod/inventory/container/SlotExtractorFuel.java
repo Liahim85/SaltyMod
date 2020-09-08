@@ -1,9 +1,9 @@
 package ru.liahim.saltmod.inventory.container;
 
 import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
+import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntityFurnace;
+import net.minecraft.tileentity.AbstractFurnaceTileEntity;
 
 public class SlotExtractorFuel extends Slot {
 
@@ -13,6 +13,6 @@ public class SlotExtractorFuel extends Slot {
 
 	@Override
 	public boolean isItemValid(ItemStack stack) {
-		return TileEntityFurnace.isItemFuel(stack);
+		return AbstractFurnaceTileEntity.isFuel(stack);
 	}
 }

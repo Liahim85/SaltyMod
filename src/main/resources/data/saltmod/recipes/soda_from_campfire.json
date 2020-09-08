@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "saltmod:saltwort_seed"
+  },
+  "result": "saltmod:soda",
+  "experience": 0,
+  "cookingtime": 600
+}

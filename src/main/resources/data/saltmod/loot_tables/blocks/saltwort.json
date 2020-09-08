@@ -1,0 +1,104 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "seed",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+	          "function": "set_count",
+	            "count": 1
+	         }
+          ],
+	      "conditions": [
+	        {
+	          "condition": "minecraft:block_state_property",
+	          "block": "saltmod:saltwort",
+	          "properties": {
+	            "age": {
+	              "min": 0,
+	              "max": 1
+	            }
+	          }
+	        }
+	      ],
+          "name": "saltmod:saltwort_seed"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+	          "function": "set_count",
+	            "count": {
+	              "min": 1,
+	              "max": 2
+	            }
+	         }
+          ],
+	      "conditions": [
+	        {
+	          "condition": "minecraft:block_state_property",
+	          "block": "saltmod:saltwort",
+	          "properties": {
+	            "age": 2
+	          }
+	        }
+	      ],
+          "name": "saltmod:saltwort_seed"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+	          "function": "set_count",
+	            "count": {
+	              "min": 1,
+	              "max": 3
+	            }
+	         }
+          ],
+	      "conditions": [
+	        {
+	          "condition": "minecraft:block_state_property",
+	          "block": "saltmod:saltwort",
+	          "properties": {
+	            "age": 3
+	          }
+	        }
+	      ],
+          "name": "saltmod:saltwort_seed"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+	          "function": "set_count",
+	            "count": {
+	              "min": 2,
+	              "max": 5
+	            }
+	         }
+          ],
+	      "conditions": [
+	        {
+	          "condition": "minecraft:block_state_property",
+	          "block": "saltmod:saltwort",
+	          "properties": {
+	            "age": 4
+	          }
+	        }
+	      ],
+          "name": "saltmod:saltwort_seed"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ]
+}

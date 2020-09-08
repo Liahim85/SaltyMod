@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "salt_rotten_flesh",
+    "pattern": [
+        "XXX",
+        "XYX",
+        "XXX"
+    ],
+    "key": {
+        "X": {
+            "tag": "saltmod:salt"
+        },
+        "Y": {
+            "item": "minecraft:rotten_flesh"
+        }
+    },
+    "result": {
+        "item": "saltmod:salt_rotten_flesh"
+    }
+}

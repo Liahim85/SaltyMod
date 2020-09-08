@@ -1,6 +1,6 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"saltmod:items/bop_salt_rice_bowl"
+        "layer0":"saltmod:item/bop_salt_rice_bowl"
     }
 }

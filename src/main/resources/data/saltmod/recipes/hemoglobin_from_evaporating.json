@@ -1,0 +1,10 @@
+{
+  "type": "saltmod:evaporating",
+  "group": "powdered_milk",
+  "ingredient": {
+    "fluid": "blood",
+    "amount": 1000
+  },
+  "result": "saltmod:hemoglobin",
+  "experience": 0.1
+}

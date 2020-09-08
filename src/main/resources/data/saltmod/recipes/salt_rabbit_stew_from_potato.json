@@ -1,0 +1,29 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt_rabbit_stew",
+    "ingredients": [
+        {
+            "item": "minecraft:cooked_rabbit"
+        },
+        {
+            "item": "saltmod:salt_baked_potato"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        [
+            {
+                "item": "minecraft:brown_mushroom"
+            },
+            {
+                "item": "minecraft:red_mushroom"
+            }
+        ],
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+    "result": {
+        "item": "saltmod:salt_rabbit_stew"
+    }
+}

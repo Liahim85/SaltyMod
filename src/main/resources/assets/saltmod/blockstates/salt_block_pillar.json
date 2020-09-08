@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "saltmod:block/salt_block_pillar" },
+        "axis=z": { "model": "saltmod:block/salt_block_pillar", "x": 90 },
+        "axis=x": { "model": "saltmod:block/salt_block_pillar", "x": 90, "y": 90 }
+    }
+}
