@@ -264,7 +264,7 @@ public class RainmakerEntity extends Entity implements IRendersAsItem, IProjecti
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return new ItemStack(ModItems.RAINMAKER);
+		return new ItemStack(ModItems.RAINMAKER.get());
 	}
 
 	@Override

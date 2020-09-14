@@ -51,7 +51,7 @@ public class ServerEventHandler {
 	@SubscribeEvent
 	public void RightClickBlock(PlayerInteractEvent.RightClickBlock event) {
 		if (event.getWorld().getBlockState(event.getPos()).getBlock() == Blocks.FLOWER_POT
-				&& event.getItemStack().getItem() == ModItems.SALTWORT_SEED) {
+				&& event.getItemStack().getItem() == ModItems.SALTWORT_SEED.get()) {
 			event.setUseBlock(Result.DENY);
 		}
 	}
@@ -74,14 +74,14 @@ public class ServerEventHandler {
     					if (stack.getCount() == 0) {
     						player.setItemStackToSlot(EquipmentSlotType.MAINHAND, ItemStack.EMPTY);
     					}
-    					ItemEntity EI = new ItemEntity(world, target.getPosX(), target.getPosY(), target.getPosZ(), new ItemStack(ModItems.SALT_PINCH));
+    					ItemEntity EI = new ItemEntity(world, target.getPosX(), target.getPosY(), target.getPosZ(), new ItemStack(ModItems.SALT_PINCH.get()));
     					EI.setPickupDelay(10);
     					world.addEntity(EI);
     					if (slime) {
-	    					ItemEntity EIS = new ItemEntity(world, target.getPosX(), target.getPosY(), target.getPosZ(), new ItemStack(ModItems.ESCARGOT));
+	    					ItemEntity EIS = new ItemEntity(world, target.getPosX(), target.getPosY(), target.getPosZ(), new ItemStack(ModItems.ESCARGOT.get()));
 	    					EI.setPickupDelay(10);
 	    					world.addEntity(EIS);
-	    					if (player instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.ESCARGOT));
+	    					if (player instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.ESCARGOT.get()));
     					} else if (player instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(Items.GLASS_BOTTLE));
     				}
 	    		}
@@ -96,19 +96,19 @@ public class ServerEventHandler {
 			if (player != null) {
 				int health = 0;
 				int check = 0;
-				if (player.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem() == ModItems.MUD_HELMET) {
+				if (player.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem() == ModItems.MUD_HELMET.get()) {
 					health += 4;
 					check = 1;
 				}
-				if (player.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem() == ModItems.MUD_CHESTPLATE) {
+				if (player.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem() == ModItems.MUD_CHESTPLATE.get()) {
 					health += 6;
 					check = 2;
 				}
-				if (player.getItemStackFromSlot(EquipmentSlotType.LEGS).getItem() == ModItems.MUD_LEGGINGS) {
+				if (player.getItemStackFromSlot(EquipmentSlotType.LEGS).getItem() == ModItems.MUD_LEGGINGS.get()) {
 					health += 6;
 					check = 2;
 				}
-				if (player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem() == ModItems.MUD_BOOTS ||
+				if (player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem() == ModItems.MUD_BOOTS.get() ||
 						player.world.getBlockState(new BlockPos(MathHelper.floor(player.getPosX()), MathHelper.floor(player.getPosY()), MathHelper.floor(player.getPosZ()))).getBlock() == ModBlocks.MUD_BLOCK.get()) {
 					health += 4;
 					check = 1;
@@ -124,7 +124,7 @@ public class ServerEventHandler {
 					if (player.ticksExisted % ((10 - check) * SaltConfig.Game.mudRegenSpeed.get()) == 0) player.heal(1);
 					if (check == 6) {
 						if (player.isBurning()) player.extinguish();
-						if (player instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.MUD_HELMET));
+						if (player instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.MUD_HELMET.get()));
 					}
 				}
 			}
@@ -136,7 +136,7 @@ public class ServerEventHandler {
 		if (event.getEntity() instanceof AnimalEntity) {
 			AnimalEntity animal = (AnimalEntity) event.getEntity();
 			if (animal instanceof CowEntity || animal instanceof HorseEntity) {
-				animal.goalSelector.addGoal(3, new TemptGoal(animal, 1.25D, Ingredient.fromItems(ModItems.SALT), false));
+				animal.goalSelector.addGoal(3, new TemptGoal(animal, 1.25D, Ingredient.fromItems(ModItems.SALT.get()), false));
 			}
 		}
 	}

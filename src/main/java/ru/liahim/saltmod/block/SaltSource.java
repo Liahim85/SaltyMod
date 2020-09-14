@@ -70,7 +70,7 @@ public class SaltSource extends Block {
 	public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
 		if ((this.isLake || this.isOre) && (player.isCreative() && hit.getFace().getIndex() > 1)) {
 			ItemStack heldItem = player.inventory.getCurrentItem();
-			if (!heldItem.isEmpty() && heldItem.getItem() == ModItems.SALT) {
+			if (!heldItem.isEmpty() && heldItem.getItem() == ModItems.SALT.get()) {
 				int i = state.get(VARIANT).getMetadata();
 				if (hit.getFace() == Direction.NORTH) {if (i % 2 < 1) i += 1; else i -= 1;}
 				else if (hit.getFace() == Direction.EAST) {if (i % 4 < 2) i += 2; else i -= 2;}

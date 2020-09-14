@@ -63,7 +63,7 @@ public class RainmakerDustEntity extends Entity {
 				world.getWorldInfo().setThunderTime(i);
 				world.getWorldInfo().setRaining(true);
 				world.getWorldInfo().setThundering(event.isThunder());
-				if (player instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.RAINMAKER));
+				if (player instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.RAINMAKER.get()));
 			}
 			rain = true;
 		}

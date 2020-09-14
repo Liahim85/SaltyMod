@@ -12,7 +12,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public enum ModArmorMaterials implements IArmorMaterial {
 
-	MUD_MATERIAL("saltmod:mud_material", 4, new int[] { 1, 1, 1, 1 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0, () -> Ingredient.fromItems(ModItems.MINERAL_MUD));
+	MUD_MATERIAL("saltmod:mud_material", 4, new int[] { 1, 1, 1, 1 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0, () -> Ingredient.fromItems(ModItems.MINERAL_MUD.get()));
 
 	private static final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 };
 	private final String name;

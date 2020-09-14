@@ -65,7 +65,7 @@ public class SaltCrystal extends BushBlock {
 			if (EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player.getHeldItemMainhand()) > 0) {
 				if (world.getBlockState(pos.down()).getBlock() == ModBlocks.SALT_ORE.get()) crystalFind(world, pos, (ServerPlayerEntity) player);
 			} else if (state.get(AGE) == 0 && world.getBlockState(pos.down()).getBlock() instanceof ICrystalBase) {
-				ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.SALT_PINCH));
+				ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.SALT_PINCH.get()));
 			}
 		}
 	}

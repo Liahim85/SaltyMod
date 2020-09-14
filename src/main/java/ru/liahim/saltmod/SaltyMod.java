@@ -63,6 +63,7 @@ public final class SaltyMod {
 			SaltConfig.COMMON_CONFIG = specPair.getLeft();
 		}
 		ModBlocks.BLOCKS.register(bus);
+		ModItems.MOD_ITEMS.register(bus);
 		ModRecipes.RECIPES.register(bus);
 		ModTileEntities.TILE_ENTITIES.register(bus);
 		ModContainers.CONTAINERS.register(bus);
@@ -84,10 +85,8 @@ public final class SaltyMod {
 					registry.register(blockItem);
 					if (block instanceof IColored) SaltyMod.proxy.addToColorSet(blockItem);
 				});
-		LOGGER.debug("Registered Items");
-		ModItems.MOD_ITEMS.forEach(item -> {
-				registry.register(item);
-				if (item instanceof IColored) SaltyMod.proxy.addToColorSet(item);
+		ModItems.MOD_ITEMS.getEntries().forEach(item -> {
+			if (item.get() instanceof IColored) SaltyMod.proxy.addToColorSet(item.get());
 		});
 		LOGGER.debug("Registered Salty Food");
 		SaltyFoodRegister.Instance.register(registry);

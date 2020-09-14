@@ -24,7 +24,7 @@ public class SaltPot extends FlowerPotBlock implements INonItem {
 
 	@Override
 	public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
-		ItemStack stack = new ItemStack(ModItems.SALTWORT_SEED);
+		ItemStack stack = new ItemStack(ModItems.SALTWORT_SEED.get());
 		if (player.getHeldItem(hand).isEmpty()) player.setHeldItem(hand, stack);
 		else if (!player.addItemStackToInventory(stack)) player.dropItem(stack, false);
 		world.setBlockState(pos, getEmptyPot().getDefaultState());

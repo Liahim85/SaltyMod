@@ -51,7 +51,7 @@ public class SlotExtractor extends Slot {
 		if (!this.thePlayer.world.isRemote && this.inventory instanceof EvaporatorTileEntity) {
 			((EvaporatorTileEntity) this.inventory).spawnExpOrbs(this.thePlayer, this.count);
 		}
-		if (stack.getItem() == ModItems.SALT_PINCH && this.thePlayer instanceof ServerPlayerEntity) {
+		if (stack.getItem() == ModItems.SALT_PINCH.get() && this.thePlayer instanceof ServerPlayerEntity) {
 			ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)this.thePlayer, new ItemStack(Items.WATER_BUCKET));
 		}
 	}

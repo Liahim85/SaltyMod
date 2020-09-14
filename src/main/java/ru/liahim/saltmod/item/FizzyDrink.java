@@ -40,7 +40,7 @@ public class FizzyDrink extends SaltBottle {
 			if (SaltConfig.Game.fizzyEffect.get()) entity.clearActivePotions();
 			else entity.curePotionEffects(new ItemStack(Items.MILK_BUCKET));
 			if (entity.isBurning()) {
-				if (entity instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)entity, new ItemStack(ModItems.FIZZY_DRINK));
+				if (entity instanceof ServerPlayerEntity) ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)entity, new ItemStack(ModItems.FIZZY_DRINK.get()));
 				entity.extinguish();
 			}
 		}

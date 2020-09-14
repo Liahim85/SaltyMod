@@ -1,1 +1,1 @@
-gradlew.bat build
+gradlew.bat build --stacktrace

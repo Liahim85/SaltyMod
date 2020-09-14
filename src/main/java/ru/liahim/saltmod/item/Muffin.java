@@ -39,7 +39,7 @@ public class Muffin extends SaltFood {
 			if (player.getFoodStats().getFoodLevel() == 20) {
 				if (player instanceof ServerPlayerEntity) {
 					player.addPotionEffect(new EffectInstance(Effects.SATURATION, 2400, 0));
-					ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.MUFFIN));
+					ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.MUFFIN.get()));
 				} else player.sendMessage(new TranslationTextComponent(this.getDefaultTranslationKey() + ".mess." + player.getRNG().nextInt(4)));
 			}
 		}

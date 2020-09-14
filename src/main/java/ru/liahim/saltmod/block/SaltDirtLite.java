@@ -72,14 +72,14 @@ public class SaltDirtLite extends Block implements ISaltDirt {
 	@Override
 	public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
 		ItemStack heldItem = player.inventory.getCurrentItem();
-		if (this.canIncrease(state) && !heldItem.isEmpty() && heldItem.getItem() == ModItems.SALT_PINCH) {
+		if (this.canIncrease(state) && !heldItem.isEmpty() && heldItem.getItem() == ModItems.SALT_PINCH.get()) {
 			if (player instanceof ServerPlayerEntity && world.getBlockState(pos.up()).getBlock() == ModBlocks.SALTWORT.get()) {
-				ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.SALTWORT_SEED));
+				ModAdvancements.SALT_COMMON.trigger((ServerPlayerEntity)player, new ItemStack(ModItems.SALTWORT_SEED.get()));
 			}
 			if (!world.isRemote && this.increaseSalt(state, (ServerWorld) world, pos) && !player.abilities.isCreativeMode) heldItem.shrink(1);
 			return ActionResultType.SUCCESS;
 		}
-		if (player.isCreative() && !heldItem.isEmpty() && heldItem.getItem() == ModItems.SALT) {
+		if (player.isCreative() && !heldItem.isEmpty() && heldItem.getItem() == ModItems.SALT.get()) {
 			int i = state.get(VARIANT).getMetadata();
 			if (hit.getFace().getIndex() <= 1) {
 				if (i == 0) i = 3;

@@ -126,7 +126,7 @@ public class SaltWort extends BushBlock implements IGrowable, INonItem {
 				int fort = EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE, heldItem);
 				if (fort > 0) i = world.rand.nextInt(5 - fort) + fort;
 	
-				ItemStack item = new ItemStack(ModItems.SALTWORT_SEED, i);
+				ItemStack item = new ItemStack(ModItems.SALTWORT_SEED.get(), i);
 				ItemEntity entity_item = new ItemEntity(world, pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, item);
 				entity_item.setDefaultPickupDelay();
 				world.addEntity(entity_item);
@@ -135,7 +135,7 @@ public class SaltWort extends BushBlock implements IGrowable, INonItem {
 				if (!player.isCreative()) heldItem.damageItem(1, player, player1 -> player1.sendBreakAnimation(EquipmentSlotType.MAINHAND));
 				return ActionResultType.SUCCESS;
 			}
-		} else if (heldItem.getItem() == ModItems.SALT_PINCH) {
+		} else if (heldItem.getItem() == ModItems.SALT_PINCH.get()) {
 			BlockState soil = world.getBlockState(pos.down());
 			if (soil.getBlock() instanceof ISaltDirt) return soil.getBlock().onBlockActivated(soil, world, pos.down(), player, hand, hit);
 		}
