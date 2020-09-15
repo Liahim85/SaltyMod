@@ -26,7 +26,7 @@ import ru.liahim.saltmod.SaltyMod;
 public class SaltyFoodRegister {
 
 	public static final SaltyFoodRegister Instance = new SaltyFoodRegister();
-	private static final String filePath = "/data/" + SaltyMod.MODID + "/salty_food/";
+	private static final String filePath = "/data/" + SaltyMod.MODID + "/saltyfood/";
 	private final Map<ResourceLocation,SaltyObject> ITEMS = Maps.newHashMap();
 	public static final List<ShapelessRecipe> recipes = Lists.newArrayList();
 

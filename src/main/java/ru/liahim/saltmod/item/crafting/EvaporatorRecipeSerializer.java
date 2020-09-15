@@ -63,7 +63,6 @@ public class EvaporatorRecipeSerializer<T extends AbstractEvaporatorRecipe> exte
 		recipe.ingredient.write(buffer);
 		buffer.writeItemStack(recipe.result);
 		buffer.writeFloat(recipe.experience);
-		buffer.writeVarInt(recipe.evaporatingTime);
 	}
 
 	public interface IFactory<T extends AbstractEvaporatorRecipe> {

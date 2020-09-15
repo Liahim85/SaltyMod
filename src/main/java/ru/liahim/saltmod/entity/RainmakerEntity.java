@@ -5,7 +5,6 @@ import java.util.OptionalInt;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.IProjectile;
-import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.player.PlayerEntity;
@@ -36,7 +35,7 @@ import ru.liahim.saltmod.init.ModEntities;
 import ru.liahim.saltmod.init.ModItems;
 import ru.liahim.saltmod.item.Rainmaker;
 
-public class RainmakerEntity extends Entity implements IRendersAsItem, IProjectile {
+public class RainmakerEntity extends Entity implements IProjectile {
 	private static final DataParameter<OptionalInt> BOOSTED_ENTITY_ID = EntityDataManager.createKey(RainmakerEntity.class, DataSerializers.OPTIONAL_VARINT);
 	private static final DataParameter<Boolean> SHOT_AT_ANGLE = EntityDataManager.createKey(RainmakerEntity.class, DataSerializers.BOOLEAN);
 	private int fireworkAge;
@@ -261,8 +260,6 @@ public class RainmakerEntity extends Entity implements IRendersAsItem, IProjecti
 		}
 	}
 
-	@Override
-	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
 		return new ItemStack(ModItems.RAINMAKER.get());
 	}

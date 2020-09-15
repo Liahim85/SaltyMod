@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.13.0.3'
+version = '1.13.0.2'
 group = 'ru.liahim.saltmod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'saltmod'
 
@@ -43,7 +43,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                saltmod {
                     source sourceSets.main
                 }
             }
@@ -59,7 +59,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                saltmod {
                     source sourceSets.main
                 }
             }
@@ -77,7 +77,7 @@ minecraft {
             args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/')
 
             mods {
-                examplemod {
+                saltmod {
                     source sourceSets.main
                 }
             }

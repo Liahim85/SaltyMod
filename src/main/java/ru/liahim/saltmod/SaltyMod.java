@@ -9,14 +9,12 @@ import org.apache.logging.log4j.Logger;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.item.crafting.RecipeManager;
 import net.minecraft.resources.IReloadableResourceManager;
-import net.minecraft.resources.IResourceManager;
 import net.minecraft.resources.IResourceManagerReloadListener;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -101,19 +99,17 @@ public final class SaltyMod {
 
 	@SuppressWarnings("deprecation")
 	private void onServerAboutToStart(FMLServerAboutToStartEvent event) {
-		IResourceManager resourceManager = Minecraft.getInstance().getResourceManager();
-		if (resourceManager instanceof IReloadableResourceManager) {
-			((IReloadableResourceManager)resourceManager).addReloadListener((IResourceManagerReloadListener) resourceManagerReload -> {
-				RecipeManager recipeManager = event.getServer().getRecipeManager();
-				Map<IRecipeType<?>, Map<ResourceLocation, IRecipe<?>>> map = Maps.newHashMap(ObfuscationReflectionHelper.getPrivateValue(RecipeManager.class, recipeManager, "field_199522_d"));
-				for (IRecipeType<?> type : map.keySet()) {
-	                map.put(type, Maps.newHashMap(map.get(type)));
-	            }
-				SaltyFoodRegister.recipes.forEach(recipe -> {
-					map.computeIfAbsent(recipe.getType(), i -> Maps.newHashMap()).put(recipe.getId(), recipe);
-				});
-				ObfuscationReflectionHelper.setPrivateValue(RecipeManager.class, recipeManager, ImmutableMap.copyOf(map), "field_199522_d");
+		IReloadableResourceManager resourceManager = event.getServer().getResourceManager();
+		resourceManager.addReloadListener((IResourceManagerReloadListener) resourceManagerReload -> {
+			RecipeManager recipeManager = event.getServer().getRecipeManager();
+			Map<IRecipeType<?>, Map<ResourceLocation, IRecipe<?>>> map = Maps.newHashMap(ObfuscationReflectionHelper.getPrivateValue(RecipeManager.class, recipeManager, "field_199522_d"));
+			for (IRecipeType<?> type : map.keySet()) {
+                map.put(type, Maps.newHashMap(map.get(type)));
+            }
+			SaltyFoodRegister.recipes.forEach(recipe -> {
+				map.computeIfAbsent(recipe.getType(), i -> Maps.newHashMap()).put(recipe.getId(), recipe);
 			});
-		}
+			ObfuscationReflectionHelper.setPrivateValue(RecipeManager.class, recipeManager, ImmutableMap.copyOf(map), "field_199522_d");
+		});
 	}
 }
